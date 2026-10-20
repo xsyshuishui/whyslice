@@ -105,8 +105,10 @@ sqlparse 0.6.0. Each bug fails 1–3 tests, is not in the traceback, and runs at
 test; see `experiments/bench/README.md`.
 - The fault line is in the relevant slice for 20/24 bugs. The slice is about half of the executed
   library lines.
-- Causal chains are long, about 180 distinct lines before the fault in tree order. The suspicious
-  lines bring the fault into the report for 13/24 bugs, 7 of them at rank 1.
+- Causal chains are long, about 180 distinct lines before the fault in tree order, and the causal tree
+  never reaches the fault. The fault is among the top 10 suspicious lines for 13/24 bugs, at rank 1
+  for 7. The slice listing at the end of the report (lines by function) contains it for 17/24, but
+  does not say which line is suspect.
 
 **E2, coding agents.** Claude Code fixed the 24 bugs under the same prompt in three arms:
 - A0: built-in tools only;
