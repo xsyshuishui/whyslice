@@ -1,0 +1,11 @@
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -2798,7 +2798,7 @@
+ 
+         # If we're allowed to break long words, then do so: put as much
+         # of the next chunk onto the current line as will fit.
+-        if self.break_long_words or space_left > 0:
++        if self.break_long_words and space_left > 0:
+             # Tabulate Custom: Build the string up piece-by-piece in order to
+             # take each charcter's width into account
+             chunk = reversed_chunks[-1]

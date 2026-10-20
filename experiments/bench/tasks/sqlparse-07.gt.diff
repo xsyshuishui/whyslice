@@ -1,0 +1,11 @@
+--- a/sqlparse/filters/aligned_indent.py
++++ b/sqlparse/filters/aligned_indent.py
+@@ -36,7 +36,7 @@
+         indent = self.indent * (2 + self._max_kwd_len)
+ 
+         return sql.Token(T.Whitespace, self.n + self.char * (
+-            self._max_kwd_len + offset - indent + self.offset))
++            self._max_kwd_len + offset + indent + self.offset))
+ 
+     def _process_statement(self, tlist):
+         if len(tlist.tokens) > 0 and tlist.tokens[0].is_whitespace \

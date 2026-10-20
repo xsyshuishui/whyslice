@@ -1,0 +1,11 @@
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -163,7 +163,7 @@
+     column's alignment in a grid table."""
+     width = colwidth
+     if align == "right":
+-        return ("=" * (width + 1)) + ":"
++        return ("=" * (width - 1)) + ":"
+     elif align == "center":
+         return ":" + ("=" * (width - 2)) + ":"
+     elif align == "left":

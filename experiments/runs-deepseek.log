@@ -1,0 +1,67 @@
+66 runs
+{"task": "sqlparse-03", "arm": "A2", "seed": 1, "success": true, "turns": 12, "cost_usd": 0.10907, "tools": {"Bash": 3, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "sqlparse-03", "arm": "A1", "seed": 1, "success": true, "turns": 20, "cost_usd": 0.112768, "tools": {"Bash": 7, "Read": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-03", "arm": "A0", "seed": 1, "success": true, "turns": 27, "cost_usd": 0.18024400000000002, "tools": {"Bash": 15, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-04", "arm": "A0", "seed": 1, "success": true, "turns": 17, "cost_usd": 0.15385000000000001, "tools": {"Bash": 5, "Read": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-04", "arm": "A1", "seed": 1, "success": true, "turns": 19, "cost_usd": 0.147411, "tools": {"Bash": 6, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-04", "arm": "A2", "seed": 1, "success": true, "turns": 14, "cost_usd": 0.17293799999999998, "tools": {"Bash": 3, "Read": 1, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "sqlparse-05", "arm": "A0", "seed": 1, "success": true, "turns": 30, "cost_usd": 0.337994, "tools": {"Bash": 11, "Read": 3, "Grep": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-05", "arm": "A1", "seed": 1, "success": true, "turns": 43, "cost_usd": 0.39959000000000006, "tools": {"Bash": 18, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-06", "arm": "A1", "seed": 1, "success": true, "turns": 22, "cost_usd": 0.20921599999999999, "tools": {"Bash": 8, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-06", "arm": "A0", "seed": 1, "success": true, "turns": 35, "cost_usd": 0.37973, "tools": {"Bash": 12, "Grep": 1, "Read": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-06", "arm": "A2", "seed": 1, "success": true, "turns": 17, "cost_usd": 0.24775899999999998, "tools": {"Bash": 4, "Read": 2, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "sqlparse-05", "arm": "A2", "seed": 1, "success": true, "turns": 57, "cost_usd": 0.994007, "tools": {"Bash": 20, "Read": 4, "Write": 3, "Edit": 1}, "hook_pushes": 3, "status": "exit 0", "error": null}
+{"task": "sqlparse-07", "arm": "A0", "seed": 1, "success": true, "turns": 43, "cost_usd": 0.37142200000000003, "tools": {"Bash": 18, "Write": 3, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-01", "arm": "A0", "seed": 1, "success": true, "turns": 68, "cost_usd": 0.7108789999999998, "tools": {"Bash": 26, "Grep": 2, "Read": 8, "Glob": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-07", "arm": "A1", "seed": 1, "success": true, "turns": 46, "cost_usd": 0.342334, "tools": {"Bash": 17, "Write": 3, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-08", "arm": "A1", "seed": 1, "success": true, "turns": 12, "cost_usd": 0.09598699999999999, "tools": {"Bash": 4, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-01", "arm": "A2", "seed": 1, "success": true, "turns": 68, "cost_usd": 0.899213, "tools": {"Bash": 33, "Write": 2, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "sqlparse-08", "arm": "A2", "seed": 1, "success": true, "turns": 24, "cost_usd": 0.20357199999999998, "tools": {"Bash": 7, "Read": 1, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "sqlparse-08", "arm": "A0", "seed": 1, "success": true, "turns": 40, "cost_usd": 0.33890300000000007, "tools": {"Bash": 14, "Read": 2, "Edit": 2}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-10", "arm": "A0", "seed": 1, "success": true, "turns": 27, "cost_usd": 0.179799, "tools": {"Bash": 7, "Grep": 2, "Read": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-09", "arm": "A2", "seed": 1, "success": true, "turns": 29, "cost_usd": 0.27385, "tools": {"Bash": 10, "Read": 1, "Grep": 2, "Edit": 1}, "hook_pushes": 2, "status": "exit 0", "error": null}
+{"task": "sqlparse-07", "arm": "A2", "seed": 1, "success": true, "turns": 66, "cost_usd": 0.7551870000000002, "tools": {"Bash": 25, "Write": 3, "Read": 3, "Edit": 1}, "hook_pushes": 2, "status": "exit 0", "error": null}
+{"task": "sqlparse-10", "arm": "A1", "seed": 1, "success": true, "turns": 35, "cost_usd": 0.275352, "tools": {"Bash": 9, "Grep": 2, "Read": 4, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-10", "arm": "A2", "seed": 1, "success": true, "turns": 16, "cost_usd": 0.13946499999999998, "tools": {"Bash": 2, "Read": 4, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "sqlparse-11", "arm": "A0", "seed": 1, "success": true, "turns": 19, "cost_usd": 0.144446, "tools": {"Bash": 6, "Read": 3, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-11", "arm": "A1", "seed": 1, "success": true, "turns": 16, "cost_usd": 0.112664, "tools": {"Bash": 6, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-11", "arm": "A2", "seed": 1, "success": true, "turns": 16, "cost_usd": 0.16623100000000002, "tools": {"Bash": 4, "Read": 1, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "sqlparse-09", "arm": "A0", "seed": 1, "success": true, "turns": 49, "cost_usd": 0.47039999999999993, "tools": {"Bash": 20, "Read": 1, "Grep": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-02", "arm": "A0", "seed": 1, "success": true, "turns": 13, "cost_usd": 0.103712, "tools": {"Bash": 3, "Grep": 1, "Read": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-12", "arm": "A2", "seed": 1, "success": true, "turns": 22, "cost_usd": 0.25284100000000004, "tools": {"Bash": 7, "Read": 1, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "sqlparse-09", "arm": "A1", "seed": 1, "success": true, "turns": 54, "cost_usd": 0.5024, "tools": {"Bash": 24, "Read": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-02", "arm": "A1", "seed": 1, "success": true, "turns": 20, "cost_usd": 0.166105, "tools": {"Bash": 3, "Grep": 1, "Read": 3, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-02", "arm": "A2", "seed": 1, "success": true, "turns": 20, "cost_usd": 0.196685, "tools": {"Bash": 4, "Read": 3, "Edit": 1}, "hook_pushes": 2, "status": "exit 0", "error": null}
+{"task": "tabulate-03", "arm": "A0", "seed": 1, "success": true, "turns": 17, "cost_usd": 0.123575, "tools": {"Bash": 6, "Read": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-03", "arm": "A1", "seed": 1, "success": true, "turns": 22, "cost_usd": 0.178936, "tools": {"Bash": 7, "Read": 2, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-03", "arm": "A2", "seed": 1, "success": true, "turns": 14, "cost_usd": 0.13170199999999999, "tools": {"Bash": 3, "Read": 1, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "sqlparse-12", "arm": "A0", "seed": 1, "success": true, "turns": 31, "cost_usd": 0.357412, "tools": {"Bash": 15, "Read": 2, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-04", "arm": "A1", "seed": 1, "success": true, "turns": 20, "cost_usd": 0.16915899999999998, "tools": {"Bash": 7, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-04", "arm": "A2", "seed": 1, "success": true, "turns": 21, "cost_usd": 0.167517, "tools": {"Bash": 5, "Read": 2, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "tabulate-05", "arm": "A0", "seed": 1, "success": true, "turns": 12, "cost_usd": 0.093, "tools": {"Bash": 4, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-04", "arm": "A0", "seed": 1, "success": true, "turns": 60, "cost_usd": 0.46460800000000013, "tools": {"Bash": 18, "Read": 6, "Write": 4, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-12", "arm": "A1", "seed": 1, "success": true, "turns": 32, "cost_usd": 0.36512599999999995, "tools": {"Bash": 13, "Read": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-06", "arm": "A0", "seed": 1, "success": true, "turns": 18, "cost_usd": 0.114779, "tools": {"Bash": 5, "Read": 2, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-05", "arm": "A2", "seed": 1, "success": true, "turns": 19, "cost_usd": 0.141333, "tools": {"Bash": 6, "Read": 1, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "tabulate-05", "arm": "A1", "seed": 1, "success": true, "turns": 24, "cost_usd": 0.15710499999999997, "tools": {"Bash": 9, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-06", "arm": "A1", "seed": 1, "success": true, "turns": 16, "cost_usd": 0.111676, "tools": {"Bash": 2, "Grep": 2, "Read": 2, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-06", "arm": "A2", "seed": 1, "success": true, "turns": 16, "cost_usd": 0.129832, "tools": {"Bash": 5, "Read": 1, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "tabulate-07", "arm": "A0", "seed": 1, "success": true, "turns": 19, "cost_usd": 0.143795, "tools": {"Bash": 7, "Read": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-07", "arm": "A2", "seed": 1, "success": true, "turns": 17, "cost_usd": 0.17713099999999998, "tools": {"Bash": 3, "Read": 2, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "tabulate-08", "arm": "A0", "seed": 1, "success": true, "turns": 19, "cost_usd": 0.147731, "tools": {"Bash": 6, "Grep": 1, "Read": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-07", "arm": "A1", "seed": 1, "success": true, "turns": 35, "cost_usd": 0.296371, "tools": {"Bash": 11, "Read": 2, "Grep": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-08", "arm": "A1", "seed": 1, "success": true, "turns": 26, "cost_usd": 0.185607, "tools": {"Bash": 8, "Read": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-08", "arm": "A2", "seed": 1, "success": true, "turns": 21, "cost_usd": 0.184242, "tools": {"Bash": 6, "Read": 1, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "tabulate-09", "arm": "A1", "seed": 1, "success": true, "turns": 24, "cost_usd": 0.38796600000000003, "tools": {"Bash": 6, "Read": 5, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-09", "arm": "A0", "seed": 1, "success": true, "turns": 28, "cost_usd": 0.19897400000000004, "tools": {"Bash": 5, "Grep": 3, "Read": 4, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-10", "arm": "A0", "seed": 1, "success": true, "turns": 22, "cost_usd": 0.124258, "tools": {"Bash": 6, "Read": 2, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-09", "arm": "A2", "seed": 1, "success": true, "turns": 22, "cost_usd": 0.19907500000000003, "tools": {"Bash": 7, "Read": 2, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "tabulate-10", "arm": "A1", "seed": 1, "success": true, "turns": 21, "cost_usd": 0.138661, "tools": {"Bash": 5, "Read": 2, "Grep": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-10", "arm": "A2", "seed": 1, "success": true, "turns": 12, "cost_usd": 0.11213899999999999, "tools": {"Bash": 2, "Read": 1, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "tabulate-11", "arm": "A0", "seed": 1, "success": true, "turns": 18, "cost_usd": 0.1117, "tools": {"Bash": 3, "Grep": 1, "Read": 2, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-11", "arm": "A1", "seed": 1, "success": true, "turns": 20, "cost_usd": 0.151674, "tools": {"Bash": 7, "Read": 2, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-12", "arm": "A0", "seed": 1, "success": true, "turns": 23, "cost_usd": 0.187318, "tools": {"Bash": 7, "Grep": 1, "Read": 3, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-11", "arm": "A2", "seed": 1, "success": true, "turns": 18, "cost_usd": 0.188934, "tools": {"Bash": 4, "Read": 2, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "tabulate-12", "arm": "A2", "seed": 1, "success": true, "turns": 15, "cost_usd": 0.161405, "tools": {"Bash": 2, "Read": 3, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "tabulate-12", "arm": "A1", "seed": 1, "success": true, "turns": 26, "cost_usd": 0.263744, "tools": {"Bash": 5, "Read": 4, "mcp__whyslice__record_failure": 1, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-01", "arm": "A1", "seed": 1, "success": true, "turns": 86, "cost_usd": 0.9012950000000002, "tools": {"Bash": 36, "Write": 3, "Read": 2, "Edit": 2}, "hook_pushes": 0, "status": "exit 0", "error": null}

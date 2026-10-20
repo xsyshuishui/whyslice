@@ -1,0 +1,11 @@
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -165,7 +165,7 @@
+     if align == "right":
+         return ("=" * (width - 1)) + ":"
+     elif align == "center":
+-        return ":" + ("=" * (width + 2)) + ":"
++        return ":" + ("=" * (width - 2)) + ":"
+     elif align == "left":
+         return ":" + ("=" * (width - 1))
+     else:

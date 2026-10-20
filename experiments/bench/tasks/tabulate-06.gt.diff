@@ -1,0 +1,11 @@
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -304,7 +304,7 @@
+         data_line = "|" + "|".join(cell_values)
+ 
+         if is_header:
+-            return make_header_line(False, colwidths, colaligns) + "\n" + data_line
++            return make_header_line(True, colwidths, colaligns) + "\n" + data_line
+         else:
+             return data_line
+ 

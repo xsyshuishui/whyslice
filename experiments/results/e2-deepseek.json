@@ -1,0 +1,2947 @@
+{
+ "summary": {
+  "arms": {
+   "A0": {
+    "runs": 24,
+    "success_rate": 1.0,
+    "successes": 24,
+    "median_turns": 12.5,
+    "median_tokens": 101221.0,
+    "median_output_tokens": 2572.0,
+    "median_cost_usd": 0.1800215,
+    "median_wall_s": 25.8,
+    "median_first_fault_edit_turn": 18.5,
+    "runs_calling_whyslice": 0,
+    "runs_with_push": 0,
+    "whyslice_calls_total": 0,
+    "edited_fault_line": 22,
+    "touched_tests": 0
+   },
+   "A1": {
+    "runs": 24,
+    "success_rate": 1.0,
+    "successes": 24,
+    "median_turns": 11.0,
+    "median_tokens": 119079.5,
+    "median_output_tokens": 2893.0,
+    "median_cost_usd": 0.1974115,
+    "median_wall_s": 29.45,
+    "median_first_fault_edit_turn": 19.0,
+    "runs_calling_whyslice": 1,
+    "runs_with_push": 0,
+    "whyslice_calls_total": 1,
+    "edited_fault_line": 23,
+    "touched_tests": 0
+   },
+   "A2": {
+    "runs": 24,
+    "success_rate": 1.0,
+    "successes": 24,
+    "median_turns": 9.0,
+    "median_tokens": 103312.0,
+    "median_output_tokens": 2502.5,
+    "median_cost_usd": 0.18068649999999997,
+    "median_wall_s": 28.4,
+    "median_first_fault_edit_turn": 14.0,
+    "runs_calling_whyslice": 0,
+    "runs_with_push": 24,
+    "whyslice_calls_total": 0,
+    "edited_fault_line": 23,
+    "touched_tests": 0
+   }
+  },
+  "paired": {
+   "A1_vs_A0": {
+    "success_wins": 0,
+    "success_losses": 0,
+    "sign_test_p": 1.0,
+    "median_turn_delta_both_solved": 0.0,
+    "median_token_ratio_both_solved": 1.3767235890597291,
+    "pairs_both_solved": 24
+   },
+   "A2_vs_A0": {
+    "success_wins": 0,
+    "success_losses": 0,
+    "sign_test_p": 1.0,
+    "median_turn_delta_both_solved": -3.0,
+    "median_token_ratio_both_solved": 1.109563222846913,
+    "pairs_both_solved": 24
+   }
+  },
+  "task_level": {
+   "A1_vs_A0": {
+    "tasks": 24,
+    "mean_turn_delta": -0.5,
+    "turn_delta_ci95": [
+     -3.292,
+     2.0
+    ],
+    "turn_delta_p": 0.75445,
+    "tasks_fewer_turns": 11,
+    "tasks_more_turns": 11,
+    "geo_mean_token_ratio": 1.2,
+    "log_token_ratio_ci95": [
+     -0.122,
+     0.458
+    ],
+    "token_p": 0.2418,
+    "mean_wall_delta_s": 36.12,
+    "wall_p": 0.10825
+   },
+   "A2_vs_A0": {
+    "tasks": 24,
+    "mean_turn_delta": -2.958,
+    "turn_delta_ci95": [
+     -5.708,
+     -0.333
+    ],
+    "turn_delta_p": 0.0454,
+    "tasks_fewer_turns": 17,
+    "tasks_more_turns": 5,
+    "geo_mean_token_ratio": 1.07,
+    "log_token_ratio_ci95": [
+     -0.203,
+     0.325
+    ],
+    "token_p": 0.6276,
+    "mean_wall_delta_s": 3.55,
+    "wall_p": 0.67745
+   }
+  },
+  "by_report_content": {
+   "A1_vs_A0_fault_in_report=True": {
+    "pairs": 13,
+    "median_turn_delta": 2,
+    "mean_turn_delta": 0.23076923076923078,
+    "median_token_ratio": 1.2750935477107492,
+    "tasks": 13,
+    "task_mean_turn_delta": 0.231,
+    "task_turn_ci95": [
+     -4.385,
+     4.077
+    ],
+    "task_turn_p": 0.9472,
+    "task_geo_token_ratio": 1.241,
+    "task_log_token_ci95": [
+     -0.187,
+     0.576
+    ],
+    "task_token_p": 0.31295
+   },
+   "A1_vs_A0_fault_in_report=False": {
+    "pairs": 11,
+    "median_turn_delta": -1,
+    "mean_turn_delta": -1.3636363636363635,
+    "median_token_ratio": 1.4783536304087093,
+    "tasks": 11,
+    "task_mean_turn_delta": -1.364,
+    "task_turn_ci95": [
+     -4.455,
+     1.273
+    ],
+    "task_turn_p": 0.4613,
+    "task_geo_token_ratio": 1.153,
+    "task_log_token_ci95": [
+     -0.359,
+     0.552
+    ],
+    "task_token_p": 0.58275
+   },
+   "A2_vs_A0_fault_in_report=True": {
+    "pairs": 13,
+    "median_turn_delta": -1,
+    "mean_turn_delta": -3.1538461538461537,
+    "median_token_ratio": 1.1157963426192068,
+    "tasks": 13,
+    "task_mean_turn_delta": -3.154,
+    "task_turn_ci95": [
+     -7.077,
+     -0.154
+    ],
+    "task_turn_p": 0.11105,
+    "task_geo_token_ratio": 1.053,
+    "task_log_token_ci95": [
+     -0.32,
+     0.378
+    ],
+    "task_token_p": 0.79105
+   },
+   "A2_vs_A0_fault_in_report=False": {
+    "pairs": 11,
+    "median_turn_delta": -4,
+    "mean_turn_delta": -2.727272727272727,
+    "median_token_ratio": 1.103330103074619,
+    "tasks": 11,
+    "task_mean_turn_delta": -2.727,
+    "task_turn_ci95": [
+     -6.455,
+     1.727
+    ],
+    "task_turn_p": 0.2639,
+    "task_geo_token_ratio": 1.091,
+    "task_log_token_ci95": [
+     -0.299,
+     0.514
+    ],
+    "task_token_p": 0.6952
+   }
+  }
+ },
+ "rows": [
+  {
+   "task": "tabulate-10",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 18.1,
+   "turns": 12,
+   "tools": {
+    "Bash": 2,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.11213899999999999,
+   "num_turns": 5,
+   "duration_ms": 13481,
+   "is_error": false,
+   "input_tokens": 12612,
+   "output_tokens": 1103,
+   "cache_read": 43008,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 2.27s"
+   ],
+   "first_fault_edit_turn": 8
+  },
+  {
+   "task": "tabulate-10",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 18.1,
+   "turns": 22,
+   "tools": {
+    "Bash": 6,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.124258,
+   "num_turns": 10,
+   "duration_ms": 14408,
+   "is_error": false,
+   "input_tokens": 10915,
+   "output_tokens": 1451,
+   "cache_read": 66816,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 2.27s"
+   ],
+   "first_fault_edit_turn": 17
+  },
+  {
+   "task": "tabulate-10",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 21.3,
+   "turns": 21,
+   "tools": {
+    "Bash": 5,
+    "Read": 2,
+    "Grep": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.138661,
+   "num_turns": 10,
+   "duration_ms": 17269,
+   "is_error": false,
+   "input_tokens": 11597,
+   "output_tokens": 1860,
+   "cache_read": 68352,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 2.02s"
+   ],
+   "first_fault_edit_turn": 15
+  },
+  {
+   "task": "tabulate-11",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 30.8,
+   "turns": 18,
+   "tools": {
+    "Bash": 4,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.188934,
+   "num_turns": 8,
+   "duration_ms": 25559,
+   "is_error": false,
+   "input_tokens": 15387,
+   "output_tokens": 2583,
+   "cache_read": 94848,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 2.29s"
+   ],
+   "first_fault_edit_turn": 14
+  },
+  {
+   "task": "tabulate-11",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 19.1,
+   "turns": 18,
+   "tools": {
+    "Bash": 3,
+    "Grep": 1,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.1117,
+   "num_turns": 8,
+   "duration_ms": 14934,
+   "is_error": false,
+   "input_tokens": 10055,
+   "output_tokens": 1433,
+   "cache_read": 51200,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 2.39s"
+   ],
+   "first_fault_edit_turn": 14
+  },
+  {
+   "task": "tabulate-11",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 23.5,
+   "turns": 20,
+   "tools": {
+    "Bash": 7,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.151674,
+   "num_turns": 11,
+   "duration_ms": 19454,
+   "is_error": false,
+   "input_tokens": 12094,
+   "output_tokens": 2404,
+   "cache_read": 62208,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.17s"
+   ],
+   "first_fault_edit_turn": 13
+  },
+  {
+   "task": "sqlparse-11",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 25.5,
+   "turns": 16,
+   "tools": {
+    "Bash": 4,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.16623100000000002,
+   "num_turns": 7,
+   "duration_ms": 21612,
+   "is_error": false,
+   "input_tokens": 14762,
+   "output_tokens": 2125,
+   "cache_read": 78592,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/reindent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.48s"
+   ],
+   "first_fault_edit_turn": 10
+  },
+  {
+   "task": "sqlparse-11",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 23.4,
+   "turns": 19,
+   "tools": {
+    "Bash": 6,
+    "Read": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.144446,
+   "num_turns": 11,
+   "duration_ms": 19880,
+   "is_error": false,
+   "input_tokens": 11998,
+   "output_tokens": 2024,
+   "cache_read": 67712,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/reindent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.78s"
+   ],
+   "first_fault_edit_turn": 13
+  },
+  {
+   "task": "sqlparse-11",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 18.2,
+   "turns": 16,
+   "tools": {
+    "Bash": 6,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.112664,
+   "num_turns": 8,
+   "duration_ms": 13880,
+   "is_error": false,
+   "input_tokens": 10526,
+   "output_tokens": 1298,
+   "cache_read": 55168,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/reindent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.72s"
+   ],
+   "first_fault_edit_turn": 10
+  },
+  {
+   "task": "sqlparse-10",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 24.6,
+   "turns": 16,
+   "tools": {
+    "Bash": 2,
+    "Read": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.13946499999999998,
+   "num_turns": 8,
+   "duration_ms": 20251,
+   "is_error": false,
+   "input_tokens": 13078,
+   "output_tokens": 1811,
+   "cache_read": 57600,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/others.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.76s"
+   ],
+   "first_fault_edit_turn": 12
+  },
+  {
+   "task": "sqlparse-10",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 25.8,
+   "turns": 27,
+   "tools": {
+    "Bash": 7,
+    "Grep": 2,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.179799,
+   "num_turns": 12,
+   "duration_ms": 22185,
+   "is_error": false,
+   "input_tokens": 12622,
+   "output_tokens": 2361,
+   "cache_read": 115328,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/others.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.72s"
+   ],
+   "first_fault_edit_turn": 19
+  },
+  {
+   "task": "sqlparse-10",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 41.5,
+   "turns": 35,
+   "tools": {
+    "Bash": 9,
+    "Grep": 2,
+    "Read": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.275352,
+   "num_turns": 17,
+   "duration_ms": 35899,
+   "is_error": false,
+   "input_tokens": 15032,
+   "output_tokens": 4480,
+   "cache_read": 176384,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/others.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.07s"
+   ],
+   "first_fault_edit_turn": 29
+  },
+  {
+   "task": "sqlparse-04",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 27.6,
+   "turns": 14,
+   "tools": {
+    "Bash": 3,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.17293799999999998,
+   "num_turns": 6,
+   "duration_ms": 23467,
+   "is_error": false,
+   "input_tokens": 13796,
+   "output_tokens": 2950,
+   "cache_read": 60416,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.09s"
+   ],
+   "first_fault_edit_turn": 10
+  },
+  {
+   "task": "sqlparse-04",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 24.1,
+   "turns": 17,
+   "tools": {
+    "Bash": 5,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.15385000000000001,
+   "num_turns": 8,
+   "duration_ms": 20567,
+   "is_error": false,
+   "input_tokens": 10893,
+   "output_tokens": 2657,
+   "cache_read": 65920,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.06s"
+   ],
+   "first_fault_edit_turn": 13
+  },
+  {
+   "task": "sqlparse-04",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 25.2,
+   "turns": 19,
+   "tools": {
+    "Bash": 6,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.147411,
+   "num_turns": 8,
+   "duration_ms": 21002,
+   "is_error": false,
+   "input_tokens": 11317,
+   "output_tokens": 2266,
+   "cache_read": 68352,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.99s"
+   ],
+   "first_fault_edit_turn": 13
+  },
+  {
+   "task": "sqlparse-03",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 18.7,
+   "turns": 12,
+   "tools": {
+    "Bash": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.10907,
+   "num_turns": 5,
+   "duration_ms": 13633,
+   "is_error": false,
+   "input_tokens": 12199,
+   "output_tokens": 1091,
+   "cache_read": 41600,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.64s"
+   ],
+   "first_fault_edit_turn": 8
+  },
+  {
+   "task": "sqlparse-03",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 24.5,
+   "turns": 27,
+   "tools": {
+    "Bash": 15,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.18024400000000002,
+   "num_turns": 17,
+   "duration_ms": 21074,
+   "is_error": false,
+   "input_tokens": 14193,
+   "output_tokens": 2487,
+   "cache_read": 94208,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.07s"
+   ],
+   "first_fault_edit_turn": 22
+  },
+  {
+   "task": "sqlparse-03",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 19.1,
+   "turns": 20,
+   "tools": {
+    "Bash": 7,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.112768,
+   "num_turns": 10,
+   "duration_ms": 14075,
+   "is_error": false,
+   "input_tokens": 9405,
+   "output_tokens": 1447,
+   "cache_read": 59136,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.49s"
+   ],
+   "first_fault_edit_turn": 14
+  },
+  {
+   "task": "sqlparse-02",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 153.8,
+   "turns": 75,
+   "tools": {
+    "Bash": 28,
+    "Read": 4,
+    "Grep": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 4,
+   "cost_usd": 0.8854989999999998,
+   "num_turns": 37,
+   "duration_ms": 147373,
+   "is_error": false,
+   "input_tokens": 30258,
+   "output_tokens": 13481,
+   "cache_read": 794368,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.14s"
+   ],
+   "first_fault_edit_turn": 45
+  },
+  {
+   "task": "sqlparse-02",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 66.5,
+   "turns": 69,
+   "tools": {
+    "Bash": 21,
+    "Grep": 2,
+    "Read": 8,
+    "Write": 3,
+    "Edit": 2
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.5749010000000001,
+   "num_turns": 37,
+   "duration_ms": 61358,
+   "is_error": false,
+   "input_tokens": 18517,
+   "output_tokens": 9260,
+   "cache_read": 501632,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.35s"
+   ],
+   "first_fault_edit_turn": 61
+  },
+  {
+   "task": "sqlparse-02",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 306.9,
+   "turns": 68,
+   "tools": {
+    "Bash": 16,
+    "Grep": 3,
+    "Read": 6,
+    "Write": 4,
+    "Edit": 2
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.7296019999999999,
+   "num_turns": 33,
+   "duration_ms": 2288,
+   "is_error": false,
+   "input_tokens": 22857,
+   "output_tokens": 11805,
+   "cache_read": 640384,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.11s"
+   ],
+   "result_events": 2,
+   "first_fault_edit_turn": 56
+  },
+  {
+   "task": "sqlparse-05",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 131.3,
+   "turns": 57,
+   "tools": {
+    "Bash": 20,
+    "Read": 4,
+    "Write": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 3,
+   "cost_usd": 0.994007,
+   "num_turns": 29,
+   "duration_ms": 127054,
+   "is_error": false,
+   "input_tokens": 28444,
+   "output_tokens": 19715,
+   "cache_read": 717824,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.90s"
+   ],
+   "first_fault_edit_turn": 51
+  },
+  {
+   "task": "sqlparse-05",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 50.6,
+   "turns": 30,
+   "tools": {
+    "Bash": 11,
+    "Read": 3,
+    "Grep": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.337994,
+   "num_turns": 17,
+   "duration_ms": 47020,
+   "is_error": false,
+   "input_tokens": 15067,
+   "output_tokens": 7547,
+   "cache_read": 147968,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.89s"
+   ],
+   "first_fault_edit_turn": 24
+  },
+  {
+   "task": "sqlparse-05",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 55.3,
+   "turns": 43,
+   "tools": {
+    "Bash": 18,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.39959000000000006,
+   "num_turns": 20,
+   "duration_ms": 51175,
+   "is_error": false,
+   "input_tokens": 16237,
+   "output_tokens": 7053,
+   "cache_read": 284160,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.73s"
+   ],
+   "first_fault_edit_turn": 35
+  },
+  {
+   "task": "tabulate-02",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 30.9,
+   "turns": 20,
+   "tools": {
+    "Bash": 4,
+    "Read": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 2,
+   "cost_usd": 0.196685,
+   "num_turns": 9,
+   "duration_ms": 27546,
+   "is_error": false,
+   "input_tokens": 18251,
+   "output_tokens": 2054,
+   "cache_read": 108160,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.28s"
+   ],
+   "first_fault_edit_turn": 16
+  },
+  {
+   "task": "tabulate-02",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 20.0,
+   "turns": 13,
+   "tools": {
+    "Bash": 3,
+    "Grep": 1,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.103712,
+   "num_turns": 7,
+   "duration_ms": 15014,
+   "is_error": false,
+   "input_tokens": 10663,
+   "output_tokens": 1125,
+   "cache_read": 44544,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.91s"
+   ],
+   "first_fault_edit_turn": 9
+  },
+  {
+   "task": "tabulate-02",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 22.9,
+   "turns": 20,
+   "tools": {
+    "Bash": 3,
+    "Grep": 1,
+    "Read": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.166105,
+   "num_turns": 9,
+   "duration_ms": 18556,
+   "is_error": false,
+   "input_tokens": 14760,
+   "output_tokens": 2105,
+   "cache_read": 79360,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.83s"
+   ],
+   "first_fault_edit_turn": 16
+  },
+  {
+   "task": "tabulate-05",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 23.9,
+   "turns": 19,
+   "tools": {
+    "Bash": 6,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.141333,
+   "num_turns": 9,
+   "duration_ms": 18869,
+   "is_error": false,
+   "input_tokens": 14370,
+   "output_tokens": 1571,
+   "cache_read": 60416,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 2.85s"
+   ],
+   "first_fault_edit_turn": 14
+  },
+  {
+   "task": "tabulate-05",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 15.3,
+   "turns": 12,
+   "tools": {
+    "Bash": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.093,
+   "num_turns": 6,
+   "duration_ms": 12059,
+   "is_error": false,
+   "input_tokens": 9457,
+   "output_tokens": 1035,
+   "cache_read": 39680,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.47s"
+   ],
+   "first_fault_edit_turn": 8
+  },
+  {
+   "task": "tabulate-05",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 26.4,
+   "turns": 24,
+   "tools": {
+    "Bash": 9,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.15710499999999997,
+   "num_turns": 11,
+   "duration_ms": 21143,
+   "is_error": false,
+   "input_tokens": 12659,
+   "output_tokens": 1794,
+   "cache_read": 97920,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 2.26s"
+   ],
+   "first_fault_edit_turn": 20
+  },
+  {
+   "task": "tabulate-04",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 27.6,
+   "turns": 21,
+   "tools": {
+    "Bash": 5,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.167517,
+   "num_turns": 9,
+   "duration_ms": 23528,
+   "is_error": false,
+   "input_tokens": 13338,
+   "output_tokens": 2323,
+   "cache_read": 85504,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.83s"
+   ],
+   "first_fault_edit_turn": 14
+  },
+  {
+   "task": "tabulate-04",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 59.1,
+   "turns": 60,
+   "tools": {
+    "Bash": 18,
+    "Read": 6,
+    "Write": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.46460800000000013,
+   "num_turns": 30,
+   "duration_ms": 55130,
+   "is_error": false,
+   "input_tokens": 17966,
+   "output_tokens": 6986,
+   "cache_read": 400256,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.96s"
+   ],
+   "first_fault_edit_turn": 54
+  },
+  {
+   "task": "tabulate-04",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 30.0,
+   "turns": 20,
+   "tools": {
+    "Bash": 7,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.16915899999999998,
+   "num_turns": 9,
+   "duration_ms": 26109,
+   "is_error": false,
+   "input_tokens": 10234,
+   "output_tokens": 3181,
+   "cache_read": 76928,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.61s"
+   ],
+   "first_fault_edit_turn": 16
+  },
+  {
+   "task": "tabulate-03",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 21.4,
+   "turns": 14,
+   "tools": {
+    "Bash": 3,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.13170199999999999,
+   "num_turns": 6,
+   "duration_ms": 17458,
+   "is_error": false,
+   "input_tokens": 13631,
+   "output_tokens": 1395,
+   "cache_read": 57344,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.72s"
+   ],
+   "first_fault_edit_turn": 10
+  },
+  {
+   "task": "tabulate-03",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 17.4,
+   "turns": 17,
+   "tools": {
+    "Bash": 6,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.123575,
+   "num_turns": 9,
+   "duration_ms": 14403,
+   "is_error": false,
+   "input_tokens": 11733,
+   "output_tokens": 1470,
+   "cache_read": 56320,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.45s"
+   ],
+   "first_fault_edit_turn": 13
+  },
+  {
+   "task": "tabulate-03",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 27.0,
+   "turns": 22,
+   "tools": {
+    "Bash": 7,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.178936,
+   "num_turns": 11,
+   "duration_ms": 22536,
+   "is_error": false,
+   "input_tokens": 14010,
+   "output_tokens": 2566,
+   "cache_read": 89472,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.82s"
+   ],
+   "first_fault_edit_turn": 18
+  },
+  {
+   "task": "tabulate-12",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 26.2,
+   "turns": 15,
+   "tools": {
+    "Bash": 2,
+    "Read": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.161405,
+   "num_turns": 7,
+   "duration_ms": 21404,
+   "is_error": false,
+   "input_tokens": 14772,
+   "output_tokens": 2209,
+   "cache_read": 64640,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 2.30s"
+   ],
+   "first_fault_edit_turn": 11
+  },
+  {
+   "task": "tabulate-12",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 29.1,
+   "turns": 23,
+   "tools": {
+    "Bash": 7,
+    "Grep": 1,
+    "Read": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.187318,
+   "num_turns": 13,
+   "duration_ms": 24655,
+   "is_error": false,
+   "input_tokens": 13035,
+   "output_tokens": 3383,
+   "cache_read": 75136,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 2.29s"
+   ],
+   "first_fault_edit_turn": 18
+  },
+  {
+   "task": "tabulate-12",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 40.1,
+   "turns": 26,
+   "tools": {
+    "Bash": 5,
+    "Read": 4,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 15,
+   "hook_pushes": 0,
+   "cost_usd": 0.263744,
+   "num_turns": 12,
+   "duration_ms": 35175,
+   "is_error": false,
+   "input_tokens": 19027,
+   "output_tokens": 3849,
+   "cache_read": 144768,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.73s"
+   ],
+   "first_fault_edit_turn": 22
+  },
+  {
+   "task": "sqlparse-12",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 35.6,
+   "turns": 22,
+   "tools": {
+    "Bash": 7,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.25284100000000004,
+   "num_turns": 10,
+   "duration_ms": 31272,
+   "is_error": false,
+   "input_tokens": 16581,
+   "output_tokens": 4112,
+   "cache_read": 134272,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/reindent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.05s"
+   ],
+   "first_fault_edit_turn": 16
+  },
+  {
+   "task": "sqlparse-12",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 119.4,
+   "turns": 31,
+   "tools": {
+    "Bash": 15,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.357412,
+   "num_turns": 19,
+   "duration_ms": 115946,
+   "is_error": false,
+   "input_tokens": 14983,
+   "output_tokens": 8297,
+   "cache_read": 150144,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/reindent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.83s"
+   ],
+   "first_fault_edit_turn": 26
+  },
+  {
+   "task": "sqlparse-12",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 148.0,
+   "turns": 32,
+   "tools": {
+    "Bash": 13,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.36512599999999995,
+   "num_turns": 16,
+   "duration_ms": 142715,
+   "is_error": false,
+   "input_tokens": 14650,
+   "output_tokens": 6980,
+   "cache_read": 234752,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/reindent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.39s"
+   ],
+   "first_fault_edit_turn": 26
+  },
+  {
+   "task": "sqlparse-07",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 124.4,
+   "turns": 66,
+   "tools": {
+    "Bash": 25,
+    "Write": 3,
+    "Read": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 2,
+   "cost_usd": 0.7551870000000002,
+   "num_turns": 33,
+   "duration_ms": 120501,
+   "is_error": false,
+   "input_tokens": 26341,
+   "output_tokens": 11594,
+   "cache_read": 667264,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.59s"
+   ],
+   "first_fault_edit_turn": 60
+  },
+  {
+   "task": "sqlparse-07",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 52.8,
+   "turns": 43,
+   "tools": {
+    "Bash": 18,
+    "Write": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.37142200000000003,
+   "num_turns": 23,
+   "duration_ms": 48657,
+   "is_error": false,
+   "input_tokens": 16418,
+   "output_tokens": 6868,
+   "cache_read": 235264,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.38s"
+   ],
+   "first_fault_edit_turn": 37
+  },
+  {
+   "task": "sqlparse-07",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 43.9,
+   "turns": 46,
+   "tools": {
+    "Bash": 17,
+    "Write": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.342334,
+   "num_turns": 22,
+   "duration_ms": 39203,
+   "is_error": false,
+   "input_tokens": 17862,
+   "output_tokens": 4960,
+   "cache_read": 258048,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.75s"
+   ],
+   "first_fault_edit_turn": 37
+  },
+  {
+   "task": "sqlparse-09",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 47.9,
+   "turns": 29,
+   "tools": {
+    "Bash": 10,
+    "Read": 1,
+    "Grep": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 2,
+   "cost_usd": 0.27385,
+   "num_turns": 15,
+   "duration_ms": 43388,
+   "is_error": false,
+   "input_tokens": 19891,
+   "output_tokens": 3443,
+   "cache_read": 176640,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.84s"
+   ],
+   "first_fault_edit_turn": 23
+  },
+  {
+   "task": "sqlparse-09",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 136.9,
+   "turns": 49,
+   "tools": {
+    "Bash": 20,
+    "Read": 1,
+    "Grep": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.47039999999999993,
+   "num_turns": 24,
+   "duration_ms": 134026,
+   "is_error": false,
+   "input_tokens": 16721,
+   "output_tokens": 8611,
+   "cache_read": 343040,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.37s"
+   ],
+   "first_fault_edit_turn": 43
+  },
+  {
+   "task": "sqlparse-09",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 159.3,
+   "turns": 54,
+   "tools": {
+    "Bash": 24,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.5024,
+   "num_turns": 27,
+   "duration_ms": 155207,
+   "is_error": false,
+   "input_tokens": 20886,
+   "output_tokens": 7586,
+   "cache_read": 416640,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.92s"
+   ],
+   "first_fault_edit_turn": 50
+  },
+  {
+   "task": "sqlparse-08",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 33.4,
+   "turns": 24,
+   "tools": {
+    "Bash": 7,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.20357199999999998,
+   "num_turns": 10,
+   "duration_ms": 29401,
+   "is_error": false,
+   "input_tokens": 14198,
+   "output_tokens": 3222,
+   "cache_read": 104064,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.96s"
+   ],
+   "first_fault_edit_turn": 17
+  },
+  {
+   "task": "sqlparse-08",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 47.4,
+   "turns": 40,
+   "tools": {
+    "Bash": 14,
+    "Read": 2,
+    "Edit": 2
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.33890300000000007,
+   "num_turns": 19,
+   "duration_ms": 43647,
+   "is_error": false,
+   "input_tokens": 14867,
+   "output_tokens": 5880,
+   "cache_read": 235136,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.95s"
+   ],
+   "first_fault_edit_turn": 21
+  },
+  {
+   "task": "sqlparse-08",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 16.4,
+   "turns": 12,
+   "tools": {
+    "Bash": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.09598699999999999,
+   "num_turns": 6,
+   "duration_ms": 12160,
+   "is_error": false,
+   "input_tokens": 9741,
+   "output_tokens": 1218,
+   "cache_read": 33664,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.66s"
+   ],
+   "first_fault_edit_turn": 8
+  },
+  {
+   "task": "sqlparse-06",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 36.9,
+   "turns": 17,
+   "tools": {
+    "Bash": 4,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.24775899999999998,
+   "num_turns": 8,
+   "duration_ms": 30805,
+   "is_error": false,
+   "input_tokens": 18927,
+   "output_tokens": 4484,
+   "cache_read": 82048,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.51s"
+   ],
+   "first_fault_edit_turn": 13
+  },
+  {
+   "task": "sqlparse-06",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 56.2,
+   "turns": 35,
+   "tools": {
+    "Bash": 12,
+    "Grep": 1,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.37973,
+   "num_turns": 16,
+   "duration_ms": 52539,
+   "is_error": false,
+   "input_tokens": 16501,
+   "output_tokens": 7409,
+   "cache_read": 224000,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.95s"
+   ],
+   "first_fault_edit_turn": 22
+  },
+  {
+   "task": "sqlparse-06",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 35.6,
+   "turns": 22,
+   "tools": {
+    "Bash": 8,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.20921599999999999,
+   "num_turns": 10,
+   "duration_ms": 30824,
+   "is_error": false,
+   "input_tokens": 12388,
+   "output_tokens": 3948,
+   "cache_read": 97152,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.22s"
+   ],
+   "first_fault_edit_turn": 16
+  },
+  {
+   "task": "sqlparse-01",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 241.4,
+   "turns": 68,
+   "tools": {
+    "Bash": 33,
+    "Write": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.899213,
+   "num_turns": 38,
+   "duration_ms": 1543,
+   "is_error": false,
+   "input_tokens": 31931,
+   "output_tokens": 12566,
+   "cache_read": 850816,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.37s"
+   ],
+   "result_events": 2,
+   "first_fault_edit_turn": 53
+  },
+  {
+   "task": "sqlparse-01",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 209.2,
+   "turns": 68,
+   "tools": {
+    "Bash": 26,
+    "Grep": 2,
+    "Read": 8,
+    "Glob": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.7108789999999998,
+   "num_turns": 39,
+   "duration_ms": 204238,
+   "is_error": false,
+   "input_tokens": 19375,
+   "output_tokens": 13780,
+   "cache_read": 539008,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.40s"
+   ],
+   "first_fault_edit_turn": 60
+  },
+  {
+   "task": "sqlparse-01",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 778.7,
+   "turns": 86,
+   "tools": {
+    "Bash": 36,
+    "Write": 3,
+    "Read": 2,
+    "Edit": 2
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.9012950000000002,
+   "num_turns": 45,
+   "duration_ms": 1539,
+   "is_error": false,
+   "input_tokens": 25024,
+   "output_tokens": 14343,
+   "cache_read": 835200,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.48s"
+   ],
+   "result_events": 2,
+   "first_fault_edit_turn": 68
+  },
+  {
+   "task": "tabulate-06",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 23.2,
+   "turns": 16,
+   "tools": {
+    "Bash": 5,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.129832,
+   "num_turns": 8,
+   "duration_ms": 17971,
+   "is_error": false,
+   "input_tokens": 13032,
+   "output_tokens": 1440,
+   "cache_read": 57344,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.77s"
+   ],
+   "first_fault_edit_turn": 10
+  },
+  {
+   "task": "tabulate-06",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 18.4,
+   "turns": 18,
+   "tools": {
+    "Bash": 5,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.114779,
+   "num_turns": 9,
+   "duration_ms": 14392,
+   "is_error": false,
+   "input_tokens": 10270,
+   "output_tokens": 1485,
+   "cache_read": 52608,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 2.17s"
+   ],
+   "first_fault_edit_turn": 12
+  },
+  {
+   "task": "tabulate-06",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 19.2,
+   "turns": 16,
+   "tools": {
+    "Bash": 2,
+    "Grep": 2,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.111676,
+   "num_turns": 8,
+   "duration_ms": 15362,
+   "is_error": false,
+   "input_tokens": 9778,
+   "output_tokens": 1298,
+   "cache_read": 60672,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.58s"
+   ],
+   "first_fault_edit_turn": 12
+  },
+  {
+   "task": "tabulate-01",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 24.7,
+   "turns": 19,
+   "tools": {
+    "Bash": 5,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.141187,
+   "num_turns": 9,
+   "duration_ms": 17864,
+   "is_error": false,
+   "input_tokens": 13132,
+   "output_tokens": 1375,
+   "cache_read": 82304,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.57s"
+   ],
+   "first_fault_edit_turn": 11
+  },
+  {
+   "task": "tabulate-01",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 19.0,
+   "turns": 11,
+   "tools": {
+    "Bash": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.094275,
+   "num_turns": 6,
+   "duration_ms": 13660,
+   "is_error": false,
+   "input_tokens": 8523,
+   "output_tokens": 1452,
+   "cache_read": 30720,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.51s"
+   ],
+   "first_fault_edit_turn": 7
+  },
+  {
+   "task": "tabulate-01",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 38.9,
+   "turns": 39,
+   "tools": {
+    "Bash": 15,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.2540510000000001,
+   "num_turns": 19,
+   "duration_ms": 32083,
+   "is_error": false,
+   "input_tokens": 13793,
+   "output_tokens": 3694,
+   "cache_read": 185472,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.48s"
+   ],
+   "first_fault_edit_turn": 31
+  },
+  {
+   "task": "tabulate-08",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 29.5,
+   "turns": 21,
+   "tools": {
+    "Bash": 6,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.184242,
+   "num_turns": 9,
+   "duration_ms": 25440,
+   "is_error": false,
+   "input_tokens": 14204,
+   "output_tokens": 2422,
+   "cache_read": 105344,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.57s"
+   ],
+   "first_fault_edit_turn": 14
+  },
+  {
+   "task": "tabulate-08",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 21.2,
+   "turns": 19,
+   "tools": {
+    "Bash": 6,
+    "Grep": 1,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.147731,
+   "num_turns": 10,
+   "duration_ms": 18399,
+   "is_error": false,
+   "input_tokens": 12834,
+   "output_tokens": 2129,
+   "cache_read": 60672,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.51s"
+   ],
+   "first_fault_edit_turn": 14
+  },
+  {
+   "task": "tabulate-08",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 28.9,
+   "turns": 26,
+   "tools": {
+    "Bash": 8,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.185607,
+   "num_turns": 11,
+   "duration_ms": 25001,
+   "is_error": false,
+   "input_tokens": 13592,
+   "output_tokens": 2535,
+   "cache_read": 108544,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.75s"
+   ],
+   "first_fault_edit_turn": 20
+  },
+  {
+   "task": "tabulate-09",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 29.2,
+   "turns": 22,
+   "tools": {
+    "Bash": 7,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.19907500000000003,
+   "num_turns": 11,
+   "duration_ms": 25003,
+   "is_error": false,
+   "input_tokens": 14883,
+   "output_tokens": 2836,
+   "cache_read": 107520,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.78s"
+   ],
+   "first_fault_edit_turn": 16
+  },
+  {
+   "task": "tabulate-09",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 29.4,
+   "turns": 28,
+   "tools": {
+    "Bash": 5,
+    "Grep": 3,
+    "Read": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.19897400000000004,
+   "num_turns": 14,
+   "duration_ms": 26453,
+   "is_error": false,
+   "input_tokens": 11830,
+   "output_tokens": 3632,
+   "cache_read": 98048,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.56s"
+   ],
+   "first_fault_edit_turn": 22
+  },
+  {
+   "task": "tabulate-09",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 26.5,
+   "turns": 24,
+   "tools": {
+    "Bash": 6,
+    "Read": 5,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.38796600000000003,
+   "num_turns": 13,
+   "duration_ms": 22898,
+   "is_error": false,
+   "input_tokens": 38213,
+   "output_tokens": 2605,
+   "cache_read": 263552,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.55s"
+   ],
+   "first_fault_edit_turn": 18
+  },
+  {
+   "task": "tabulate-07",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 27.4,
+   "turns": 17,
+   "tools": {
+    "Bash": 3,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.17713099999999998,
+   "num_turns": 7,
+   "duration_ms": 23656,
+   "is_error": false,
+   "input_tokens": 14211,
+   "output_tokens": 2684,
+   "cache_read": 77952,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.36s"
+   ],
+   "first_fault_edit_turn": 13
+  },
+  {
+   "task": "tabulate-07",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 25.8,
+   "turns": 19,
+   "tools": {
+    "Bash": 7,
+    "Read": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.143795,
+   "num_turns": 10,
+   "duration_ms": 21916,
+   "is_error": false,
+   "input_tokens": 10890,
+   "output_tokens": 2217,
+   "cache_read": 67840,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.61s"
+   ],
+   "first_fault_edit_turn": 12
+  },
+  {
+   "task": "tabulate-07",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "deepseek-flash",
+   "status": "exit 0",
+   "stderr_tail": "\u26a0 claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login \u00b7 Unset it to load your organization's connectors\n[claude-code:unrecognized_model] {\"model\":\"deepseek-flash\",\"query_source\":\"sdk\"}\n",
+   "wall_s": 42.7,
+   "turns": 35,
+   "tools": {
+    "Bash": 11,
+    "Read": 2,
+    "Grep": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.296371,
+   "num_turns": 16,
+   "duration_ms": 37701,
+   "is_error": false,
+   "input_tokens": 14308,
+   "output_tokens": 5207,
+   "cache_read": 189312,
+   "cache_write": 0,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 2.00s"
+   ],
+   "first_fault_edit_turn": 27
+  }
+ ]
+}

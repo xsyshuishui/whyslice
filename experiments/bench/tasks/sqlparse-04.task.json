@@ -1,0 +1,22 @@
+{
+ "id": "sqlparse-04",
+ "library": "sqlparse",
+ "upstream_tag": "0.6.0",
+ "upstream_commit": "2f40da99b50d81135aecf96f6b08fcfa338a96de",
+ "failing_test": "tests/test_split.py::test_split_multiple_for_loops_in_begin_end",
+ "all_failing_tests": [
+  "tests/test_split.py::test_split_multiple_for_loops_in_begin_end"
+ ],
+ "test_command": ".venv/bin/python -m pytest tests/test_split.py::test_split_multiple_for_loops_in_begin_end",
+ "full_suite_command": ".venv/bin/python -m pytest tests",
+ "setup": "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r '{bench}/upstream/sqlparse.requirements.txt'",
+ "fault_file": "sqlparse/engine/statement_splitter.py",
+ "fault_line": 67,
+ "fault_function": "StatementSplitter._handle_closing_keyword",
+ "original_token": "1",
+ "mutated_token": "2",
+ "operator": "int+1",
+ "depth": 5,
+ "fault_func_in_traceback": false,
+ "mutant_id": "sqlparse-m052"
+}

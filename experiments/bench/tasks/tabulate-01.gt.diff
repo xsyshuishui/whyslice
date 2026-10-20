@@ -1,0 +1,11 @@
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -138,7 +138,7 @@
+     indicate column's alignment (as in `pipe` output format)."""
+     w = colwidth
+     if align in ["right", "decimal"]:
+-        return ("-" * (w + 1)) + ":"
++        return ("-" * (w - 1)) + ":"
+     elif align == "center":
+         return ":" + ("-" * (w - 2)) + ":"
+     elif align == "left":

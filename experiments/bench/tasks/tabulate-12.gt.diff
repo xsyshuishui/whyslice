@@ -1,0 +1,11 @@
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -2899,7 +2899,7 @@
+ 
+             # The current line is full, and the next chunk is too big to
+             # fit on *any* line (not just this one).
+-            if chunks and self._len(chunks[-1]) >= width:
++            if chunks and self._len(chunks[-1]) > width:
+                 self._handle_long_word(chunks, cur_line, cur_len, width)
+                 cur_len = sum(map(self._len, cur_line))
+ 

@@ -1,0 +1,11 @@
+--- a/sqlparse/engine/statement_splitter.py
++++ b/sqlparse/engine/statement_splitter.py
+@@ -110,7 +110,7 @@
+             return 0
+ 
+         # Handle DECLARE block start (only for CREATE statements)
+-        if unified == 'DECLARE' and self._is_create and self._block_stack:
++        if unified == 'DECLARE' and self._is_create and not self._block_stack:
+             self._block_stack.append('DECLARE')
+             return 1
+ 

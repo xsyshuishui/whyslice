@@ -1,0 +1,11 @@
+--- a/sqlparse/filters/aligned_indent.py
++++ b/sqlparse/filters/aligned_indent.py
+@@ -120,7 +120,7 @@
+             idx = tlist.token_index(sgroup)
+             pidx, prev_ = tlist.token_prev(idx)
+             # HACK: make "group/order by" work. Longer than max_len.
+-            offset_ = 2 if (
++            offset_ = 3 if (
+                 prev_ and prev_.match(T.Keyword, self.by_words, regex=True)
+             ) else 0
+             with offset(self, offset_):

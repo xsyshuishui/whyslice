@@ -1,0 +1,2971 @@
+{
+ "summary": {
+  "arms": {
+   "A0": {
+    "runs": 24,
+    "success_rate": 0.9166666666666666,
+    "successes": 22,
+    "median_turns": 18.5,
+    "median_tokens": 459582.0,
+    "median_output_tokens": 7800.5,
+    "median_cost_usd": 0.1341322,
+    "median_wall_s": 88.05,
+    "median_first_fault_edit_turn": 35.0,
+    "runs_calling_whyslice": 0,
+    "runs_with_push": 0,
+    "whyslice_calls_total": 0,
+    "edited_fault_line": 20,
+    "touched_tests": 0
+   },
+   "A1": {
+    "runs": 24,
+    "success_rate": 1.0,
+    "successes": 24,
+    "median_turns": 20.0,
+    "median_tokens": 592492.5,
+    "median_output_tokens": 6530.0,
+    "median_cost_usd": 0.1659543,
+    "median_wall_s": 79.4,
+    "median_first_fault_edit_turn": 33.0,
+    "runs_calling_whyslice": 20,
+    "runs_with_push": 0,
+    "whyslice_calls_total": 28,
+    "edited_fault_line": 15,
+    "touched_tests": 0
+   },
+   "A2": {
+    "runs": 24,
+    "success_rate": 1.0,
+    "successes": 24,
+    "median_turns": 15.0,
+    "median_tokens": 495789.5,
+    "median_output_tokens": 6415.0,
+    "median_cost_usd": 0.14399435,
+    "median_wall_s": 77.5,
+    "median_first_fault_edit_turn": 22.0,
+    "runs_calling_whyslice": 10,
+    "runs_with_push": 24,
+    "whyslice_calls_total": 12,
+    "edited_fault_line": 17,
+    "touched_tests": 0
+   }
+  },
+  "paired": {
+   "A1_vs_A0": {
+    "success_wins": 2,
+    "success_losses": 0,
+    "sign_test_p": 0.5,
+    "median_turn_delta_both_solved": 0.5,
+    "median_token_ratio_both_solved": 1.1432224889000493,
+    "pairs_both_solved": 22
+   },
+   "A2_vs_A0": {
+    "success_wins": 2,
+    "success_losses": 0,
+    "sign_test_p": 0.5,
+    "median_turn_delta_both_solved": -4.5,
+    "median_token_ratio_both_solved": 0.8028807521577681,
+    "pairs_both_solved": 22
+   }
+  },
+  "task_level": {
+   "A1_vs_A0": {
+    "tasks": 22,
+    "mean_turn_delta": 0.136,
+    "turn_delta_ci95": [
+     -3.091,
+     3.136
+    ],
+    "turn_delta_p": 0.95685,
+    "tasks_fewer_turns": 8,
+    "tasks_more_turns": 11,
+    "geo_mean_token_ratio": 1.149,
+    "log_token_ratio_ci95": [
+     -0.012,
+     0.297
+    ],
+    "token_p": 0.0978,
+    "mean_wall_delta_s": 0.35,
+    "wall_p": 0.9481
+   },
+   "A2_vs_A0": {
+    "tasks": 22,
+    "mean_turn_delta": -4.636,
+    "turn_delta_ci95": [
+     -8.045,
+     -1.318
+    ],
+    "turn_delta_p": 0.01555,
+    "tasks_fewer_turns": 15,
+    "tasks_more_turns": 6,
+    "geo_mean_token_ratio": 0.888,
+    "log_token_ratio_ci95": [
+     -0.349,
+     0.118
+    ],
+    "token_p": 0.34985,
+    "mean_wall_delta_s": -2.53,
+    "wall_p": 0.76945
+   }
+  },
+  "by_report_content": {
+   "A1_vs_A0_fault_in_report=True": {
+    "pairs": 12,
+    "median_turn_delta": 0.5,
+    "mean_turn_delta": 0.08333333333333333,
+    "median_token_ratio": 1.1960987247706956,
+    "tasks": 12,
+    "task_mean_turn_delta": 0.083,
+    "task_turn_ci95": [
+     -5.167,
+     4.833
+    ],
+    "task_turn_p": 1.0,
+    "task_geo_token_ratio": 1.168,
+    "task_log_token_ci95": [
+     -0.103,
+     0.435
+    ],
+    "task_token_p": 0.2992
+   },
+   "A1_vs_A0_fault_in_report=False": {
+    "pairs": 10,
+    "median_turn_delta": 1.0,
+    "mean_turn_delta": 0.2,
+    "median_token_ratio": 1.1432224889000493,
+    "tasks": 10,
+    "task_mean_turn_delta": 0.2,
+    "task_turn_ci95": [
+     -3.1,
+     3.1
+    ],
+    "task_turn_p": 0.94415,
+    "task_geo_token_ratio": 1.126,
+    "task_log_token_ci95": [
+     0.001,
+     0.221
+    ],
+    "task_token_p": 0.0762
+   },
+   "A2_vs_A0_fault_in_report=True": {
+    "pairs": 12,
+    "median_turn_delta": -4.5,
+    "mean_turn_delta": -4.916666666666667,
+    "median_token_ratio": 0.7047377898977897,
+    "tasks": 12,
+    "task_mean_turn_delta": -4.917,
+    "task_turn_ci95": [
+     -10.667,
+     0.583
+    ],
+    "task_turn_p": 0.13785,
+    "task_geo_token_ratio": 0.787,
+    "task_log_token_ci95": [
+     -0.588,
+     0.142
+    ],
+    "task_token_p": 0.2465
+   },
+   "A2_vs_A0_fault_in_report=False": {
+    "pairs": 10,
+    "median_turn_delta": -4.5,
+    "mean_turn_delta": -4.3,
+    "median_token_ratio": 0.9723842846363693,
+    "tasks": 10,
+    "task_mean_turn_delta": -4.3,
+    "task_turn_ci95": [
+     -7.5,
+     -1.1
+    ],
+    "task_turn_p": 0.05265,
+    "task_geo_token_ratio": 1.027,
+    "task_log_token_ci95": [
+     -0.214,
+     0.272
+    ],
+    "task_token_p": 0.84405
+   }
+  }
+ },
+ "rows": [
+  {
+   "task": "tabulate-10",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 43.6,
+   "turns": 30,
+   "tools": {
+    "Bash": 6,
+    "Read": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.0835064,
+   "num_turns": 12,
+   "duration_ms": 39969,
+   "is_error": false,
+   "input_tokens": 98,
+   "output_tokens": 2806,
+   "cache_read": 269044,
+   "cache_write": 21237,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.07s"
+   ],
+   "first_fault_edit_turn": 19
+  },
+  {
+   "task": "tabulate-10",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 39.1,
+   "turns": 29,
+   "tools": {
+    "Bash": 4,
+    "Read": 4,
+    "Glob": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.13728390000000001,
+   "num_turns": 11,
+   "duration_ms": 35756,
+   "is_error": false,
+   "input_tokens": 90,
+   "output_tokens": 3080,
+   "cache_read": 329419,
+   "cache_write": 44426,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.02s"
+   ],
+   "first_fault_edit_turn": 21
+  },
+  {
+   "task": "tabulate-10",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 58.2,
+   "turns": 37,
+   "tools": {
+    "Bash": 4,
+    "Read": 5,
+    "mcp__whyslice__record_failure": 1,
+    "Glob": 1,
+    "Grep": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 10,
+   "hook_pushes": 0,
+   "cost_usd": 0.10144740000000002,
+   "num_turns": 15,
+   "duration_ms": 54485,
+   "is_error": false,
+   "input_tokens": 122,
+   "output_tokens": 4525,
+   "cache_read": 354204,
+   "cache_write": 21640,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.06s"
+   ],
+   "first_fault_edit_turn": 29
+  },
+  {
+   "task": "tabulate-11",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 43.8,
+   "turns": 28,
+   "tools": {
+    "Bash": 6,
+    "Read": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.0718397,
+   "num_turns": 12,
+   "duration_ms": 40033,
+   "is_error": false,
+   "input_tokens": 98,
+   "output_tokens": 3219,
+   "cache_read": 238107,
+   "cache_write": 15918,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.09s"
+   ],
+   "first_fault_edit_turn": 19
+  },
+  {
+   "task": "tabulate-11",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 54.9,
+   "turns": 39,
+   "tools": {
+    "Bash": 4,
+    "Read": 7,
+    "Grep": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.0890159,
+   "num_turns": 16,
+   "duration_ms": 51427,
+   "is_error": false,
+   "input_tokens": 130,
+   "output_tokens": 4767,
+   "cache_read": 296549,
+   "cache_write": 17698,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.06s"
+   ],
+   "first_fault_edit_turn": 31
+  },
+  {
+   "task": "tabulate-11",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 72.6,
+   "turns": 56,
+   "tools": {
+    "Bash": 12,
+    "Read": 10,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 39,
+   "hook_pushes": 0,
+   "cost_usd": 0.13490579999999996,
+   "num_turns": 25,
+   "duration_ms": 69071,
+   "is_error": false,
+   "input_tokens": 202,
+   "output_tokens": 5390,
+   "cache_read": 560398,
+   "cache_write": 25857,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.04s"
+   ],
+   "first_fault_edit_turn": 45
+  },
+  {
+   "task": "sqlparse-11",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 106.5,
+   "turns": 48,
+   "tools": {
+    "Bash": 11,
+    "Read": 4,
+    "Grep": 1,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 20,
+   "hook_pushes": 1,
+   "cost_usd": 0.14223349999999998,
+   "num_turns": 19,
+   "duration_ms": 102452,
+   "is_error": false,
+   "input_tokens": 154,
+   "output_tokens": 8794,
+   "cache_read": 497395,
+   "cache_write": 24185,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.26s"
+   ],
+   "first_fault_edit_turn": 26
+  },
+  {
+   "task": "sqlparse-11",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 93.6,
+   "turns": 44,
+   "tools": {
+    "Bash": 7,
+    "Read": 6,
+    "Glob": 1,
+    "Grep": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.1253105,
+   "num_turns": 17,
+   "duration_ms": 88915,
+   "is_error": false,
+   "input_tokens": 138,
+   "output_tokens": 9331,
+   "cache_read": 356955,
+   "cache_write": 21411,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/reindent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.72s"
+   ],
+   "first_fault_edit_turn": 30
+  },
+  {
+   "task": "sqlparse-11",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 85.8,
+   "turns": 36,
+   "tools": {
+    "Bash": 6,
+    "Read": 4,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 11,
+   "hook_pushes": 0,
+   "cost_usd": 0.13832629999999999,
+   "num_turns": 13,
+   "duration_ms": 81140,
+   "is_error": false,
+   "input_tokens": 106,
+   "output_tokens": 8134,
+   "cache_read": 369803,
+   "cache_write": 30285,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/reindent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.72s"
+   ],
+   "first_fault_edit_turn": 25
+  },
+  {
+   "task": "sqlparse-10",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 43.9,
+   "turns": 25,
+   "tools": {
+    "Bash": 4,
+    "Read": 2,
+    "mcp__whyslice__why": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 11,
+   "hook_pushes": 1,
+   "cost_usd": 0.09347550000000002,
+   "num_turns": 9,
+   "duration_ms": 39758,
+   "is_error": false,
+   "input_tokens": 74,
+   "output_tokens": 2858,
+   "cache_read": 238475,
+   "cache_write": 27632,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/others.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.09s"
+   ],
+   "first_fault_edit_turn": 17
+  },
+  {
+   "task": "sqlparse-10",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 69.6,
+   "turns": 46,
+   "tools": {
+    "Bash": 10,
+    "Read": 5,
+    "Glob": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.128383,
+   "num_turns": 18,
+   "duration_ms": 66017,
+   "is_error": false,
+   "input_tokens": 146,
+   "output_tokens": 5124,
+   "cache_read": 475990,
+   "cache_write": 27509,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/others.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.06s"
+   ],
+   "first_fault_edit_turn": 35
+  },
+  {
+   "task": "sqlparse-10",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 62.1,
+   "turns": 37,
+   "tools": {
+    "Bash": 5,
+    "Read": 4,
+    "Grep": 1,
+    "mcp__whyslice__record_failure": 1,
+    "mcp__whyslice__why": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 23,
+   "hook_pushes": 0,
+   "cost_usd": 0.10520389999999999,
+   "num_turns": 14,
+   "duration_ms": 58294,
+   "is_error": false,
+   "input_tokens": 114,
+   "output_tokens": 4434,
+   "cache_read": 304659,
+   "cache_write": 26227,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/others.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.01s"
+   ],
+   "first_fault_edit_turn": 29
+  },
+  {
+   "task": "sqlparse-04",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 93.9,
+   "turns": 31,
+   "tools": {
+    "Bash": 6,
+    "Read": 3,
+    "mcp__whyslice__why": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 15,
+   "hook_pushes": 1,
+   "cost_usd": 0.1348059,
+   "num_turns": 12,
+   "duration_ms": 88001,
+   "is_error": false,
+   "input_tokens": 98,
+   "output_tokens": 9004,
+   "cache_read": 313279,
+   "cache_write": 29180,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.63s"
+   ],
+   "first_fault_edit_turn": 18
+  },
+  {
+   "task": "sqlparse-04",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 69.2,
+   "turns": 30,
+   "tools": {
+    "Bash": 7,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.09914669999999999,
+   "num_turns": 11,
+   "duration_ms": 64493,
+   "is_error": false,
+   "input_tokens": 90,
+   "output_tokens": 6817,
+   "cache_read": 237957,
+   "cache_write": 20588,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.00s"
+   ],
+   "first_fault_edit_turn": 19
+  },
+  {
+   "task": "sqlparse-04",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 65.9,
+   "turns": 24,
+   "tools": {
+    "Bash": 4,
+    "Read": 2,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 13,
+   "hook_pushes": 0,
+   "cost_usd": 0.09756190000000001,
+   "num_turns": 9,
+   "duration_ms": 60769,
+   "is_error": false,
+   "input_tokens": 74,
+   "output_tokens": 6404,
+   "cache_read": 197099,
+   "cache_write": 22879,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.28s"
+   ],
+   "first_fault_edit_turn": 16
+  },
+  {
+   "task": "sqlparse-03",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 55.0,
+   "turns": 32,
+   "tools": {
+    "Bash": 5,
+    "Read": 5,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.10064610000000002,
+   "num_turns": 12,
+   "duration_ms": 47728,
+   "is_error": false,
+   "input_tokens": 98,
+   "output_tokens": 3727,
+   "cache_read": 306051,
+   "cache_write": 25654,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 3.27s"
+   ],
+   "first_fault_edit_turn": 21
+  },
+  {
+   "task": "sqlparse-03",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 54.8,
+   "turns": 39,
+   "tools": {
+    "Bash": 8,
+    "Read": 4,
+    "Write": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.1138242,
+   "num_turns": 15,
+   "duration_ms": 48918,
+   "is_error": false,
+   "input_tokens": 122,
+   "output_tokens": 4337,
+   "cache_read": 378172,
+   "cache_write": 27100,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.50s"
+   ],
+   "first_fault_edit_turn": 28
+  },
+  {
+   "task": "sqlparse-03",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 44.0,
+   "turns": 28,
+   "tools": {
+    "Bash": 5,
+    "Read": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.09251140000000001,
+   "num_turns": 10,
+   "duration_ms": 38169,
+   "is_error": false,
+   "input_tokens": 82,
+   "output_tokens": 3351,
+   "cache_read": 251064,
+   "cache_write": 25284,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.08s"
+   ],
+   "first_fault_edit_turn": 20
+  },
+  {
+   "task": "sqlparse-02",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 48.3,
+   "turns": 28,
+   "tools": {
+    "Bash": 4,
+    "Read": 3,
+    "mcp__whyslice__why": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 14,
+   "hook_pushes": 1,
+   "cost_usd": 0.07457520000000001,
+   "num_turns": 10,
+   "duration_ms": 44289,
+   "is_error": false,
+   "input_tokens": 82,
+   "output_tokens": 3728,
+   "cache_read": 204932,
+   "cache_write": 17680,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.06s"
+   ],
+   "first_fault_edit_turn": 20
+  },
+  {
+   "task": "sqlparse-02",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 92.3,
+   "turns": 38,
+   "tools": {
+    "Bash": 8,
+    "Read": 2,
+    "Grep": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.1413423,
+   "num_turns": 15,
+   "duration_ms": 86751,
+   "is_error": false,
+   "input_tokens": 122,
+   "output_tokens": 9593,
+   "cache_read": 360593,
+   "cache_write": 28598,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.68s"
+   ],
+   "first_fault_edit_turn": 27
+  },
+  {
+   "task": "sqlparse-02",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 111.8,
+   "turns": 79,
+   "tools": {
+    "Bash": 14,
+    "Read": 12,
+    "mcp__whyslice__record_failure": 1,
+    "Grep": 1,
+    "Glob": 1,
+    "Edit": 2
+   },
+   "first_whyslice_turn": 10,
+   "hook_pushes": 0,
+   "cost_usd": 0.1808255,
+   "num_turns": 32,
+   "duration_ms": 106187,
+   "is_error": false,
+   "input_tokens": 258,
+   "output_tokens": 9307,
+   "cache_read": 699965,
+   "cache_write": 32018,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.65s"
+   ],
+   "first_fault_edit_turn": 42
+  },
+  {
+   "task": "sqlparse-05",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 177.2,
+   "turns": 63,
+   "tools": {
+    "Bash": 12,
+    "Read": 5,
+    "mcp__whyslice__why": 1,
+    "Edit": 4
+   },
+   "first_whyslice_turn": 16,
+   "hook_pushes": 3,
+   "cost_usd": 0.2745809999999999,
+   "num_turns": 23,
+   "duration_ms": 173293,
+   "is_error": false,
+   "input_tokens": 186,
+   "output_tokens": 16609,
+   "cache_read": 928760,
+   "cache_write": 49237,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.08s"
+   ],
+   "first_fault_edit_turn": 19
+  },
+  {
+   "task": "sqlparse-05",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 214.4,
+   "turns": 97,
+   "tools": {
+    "Bash": 23,
+    "Read": 8,
+    "Grep": 1,
+    "Edit": 2
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.3540861,
+   "num_turns": 35,
+   "duration_ms": 210402,
+   "is_error": false,
+   "input_tokens": 282,
+   "output_tokens": 21477,
+   "cache_read": 1465111,
+   "cache_write": 49954,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.07s"
+   ],
+   "first_fault_edit_turn": 35
+  },
+  {
+   "task": "sqlparse-05",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 220.2,
+   "turns": 66,
+   "tools": {
+    "Bash": 10,
+    "Read": 4,
+    "mcp__whyslice__record_failure": 2,
+    "mcp__whyslice__why": 3,
+    "Edit": 3
+   },
+   "first_whyslice_turn": 11,
+   "hook_pushes": 0,
+   "cost_usd": 0.34379709999999997,
+   "num_turns": 23,
+   "duration_ms": 215985,
+   "is_error": false,
+   "input_tokens": 186,
+   "output_tokens": 23698,
+   "cache_read": 1056811,
+   "cache_write": 59720,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.41s"
+   ],
+   "first_fault_edit_turn": 23
+  },
+  {
+   "task": "tabulate-02",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 47.6,
+   "turns": 24,
+   "tools": {
+    "Bash": 5,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.0643293,
+   "num_turns": 9,
+   "duration_ms": 42901,
+   "is_error": false,
+   "input_tokens": 74,
+   "output_tokens": 3966,
+   "cache_read": 163433,
+   "cache_write": 14041,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.08s"
+   ],
+   "first_fault_edit_turn": 16
+  },
+  {
+   "task": "tabulate-02",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 59.1,
+   "turns": 40,
+   "tools": {
+    "Bash": 6,
+    "Read": 5,
+    "Grep": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.0816913,
+   "num_turns": 17,
+   "duration_ms": 55668,
+   "is_error": false,
+   "input_tokens": 138,
+   "output_tokens": 5460,
+   "cache_read": 284053,
+   "cache_write": 12924,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.06s"
+   ],
+   "first_fault_edit_turn": 32
+  },
+  {
+   "task": "tabulate-02",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 65.5,
+   "turns": 44,
+   "tools": {
+    "Bash": 8,
+    "Read": 3,
+    "Grep": 4,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 23,
+   "hook_pushes": 0,
+   "cost_usd": 0.1106801,
+   "num_turns": 18,
+   "duration_ms": 61758,
+   "is_error": false,
+   "input_tokens": 146,
+   "output_tokens": 4999,
+   "cache_read": 406151,
+   "cache_write": 22462,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.05s"
+   ],
+   "first_fault_edit_turn": 29
+  },
+  {
+   "task": "tabulate-05",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 45.4,
+   "turns": 30,
+   "tools": {
+    "Bash": 6,
+    "Read": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.06744520000000001,
+   "num_turns": 12,
+   "duration_ms": 41734,
+   "is_error": false,
+   "input_tokens": 98,
+   "output_tokens": 3156,
+   "cache_read": 226912,
+   "cache_write": 14438,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.06s"
+   ],
+   "first_fault_edit_turn": 23
+  },
+  {
+   "task": "tabulate-05",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 78.6,
+   "turns": 58,
+   "tools": {
+    "Bash": 14,
+    "Read": 9,
+    "Edit": 2
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.1267213,
+   "num_turns": 26,
+   "duration_ms": 75213,
+   "is_error": false,
+   "input_tokens": 210,
+   "output_tokens": 6626,
+   "cache_read": 543233,
+   "cache_write": 19529,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.01s"
+   ],
+   "first_fault_edit_turn": 46
+  },
+  {
+   "task": "tabulate-05",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 59.8,
+   "turns": 46,
+   "tools": {
+    "Bash": 11,
+    "Read": 7,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.09947260000000001,
+   "num_turns": 20,
+   "duration_ms": 56083,
+   "is_error": false,
+   "input_tokens": 162,
+   "output_tokens": 5256,
+   "cache_read": 393866,
+   "cache_write": 16822,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.04s"
+   ],
+   "first_fault_edit_turn": 32
+  },
+  {
+   "task": "tabulate-04",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 294.5,
+   "turns": 106,
+   "tools": {
+    "Bash": 20,
+    "Read": 15,
+    "Edit": 4
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 2,
+   "cost_usd": 0.42161430000000005,
+   "num_turns": 40,
+   "duration_ms": 290822,
+   "is_error": false,
+   "input_tokens": 322,
+   "output_tokens": 31685,
+   "cache_read": 1527473,
+   "cache_write": 55060,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.06s"
+   ],
+   "first_fault_edit_turn": 44
+  },
+  {
+   "task": "tabulate-04",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 1",
+   "stderr_tail": "",
+   "wall_s": 275.6,
+   "turns": 141,
+   "tools": {
+    "Bash": 33,
+    "Read": 14,
+    "Grep": 1,
+    "Edit": 12
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.4392691000000001,
+   "num_turns": 61,
+   "duration_ms": 272058,
+   "is_error": true,
+   "input_tokens": 482,
+   "output_tokens": 28930,
+   "cache_read": 1988311,
+   "cache_write": 47653,
+   "target_pass": false,
+   "suite_pass": false,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": false,
+   "suite_tail": [
+    "3 failed, 300 passed, 16 skipped in 1.14s"
+   ],
+   "first_fault_edit_turn": 47
+  },
+  {
+   "task": "tabulate-04",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 292.8,
+   "turns": 103,
+   "tools": {
+    "Bash": 18,
+    "mcp__whyslice__record_failure": 1,
+    "Read": 9,
+    "mcp__whyslice__why": 1,
+    "Edit": 6
+   },
+   "first_whyslice_turn": 15,
+   "hook_pushes": 0,
+   "cost_usd": 0.41860390000000014,
+   "num_turns": 36,
+   "duration_ms": 289154,
+   "is_error": false,
+   "input_tokens": 290,
+   "output_tokens": 31140,
+   "cache_read": 1520919,
+   "cache_write": 55261,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.03s"
+   ],
+   "first_fault_edit_turn": 48
+  },
+  {
+   "task": "tabulate-03",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 41.5,
+   "turns": 22,
+   "tools": {
+    "Bash": 4,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.0565967,
+   "num_turns": 8,
+   "duration_ms": 37806,
+   "is_error": false,
+   "input_tokens": 66,
+   "output_tokens": 3299,
+   "cache_read": 143557,
+   "cache_write": 12840,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.02s"
+   ],
+   "first_fault_edit_turn": 14
+  },
+  {
+   "task": "tabulate-03",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 49.4,
+   "turns": 34,
+   "tools": {
+    "Bash": 7,
+    "Read": 2,
+    "Grep": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.07202800000000001,
+   "num_turns": 14,
+   "duration_ms": 45984,
+   "is_error": false,
+   "input_tokens": 114,
+   "output_tokens": 4474,
+   "cache_read": 235260,
+   "cache_write": 13009,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.05s"
+   ],
+   "first_fault_edit_turn": 26
+  },
+  {
+   "task": "tabulate-03",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 64.6,
+   "turns": 44,
+   "tools": {
+    "Bash": 11,
+    "Read": 5,
+    "Glob": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.18524940000000004,
+   "num_turns": 19,
+   "duration_ms": 60645,
+   "is_error": false,
+   "input_tokens": 154,
+   "output_tokens": 5293,
+   "cache_read": 756944,
+   "cache_write": 41468,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.11s"
+   ],
+   "first_fault_edit_turn": 35
+  },
+  {
+   "task": "tabulate-12",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 112.8,
+   "turns": 47,
+   "tools": {
+    "Bash": 9,
+    "Read": 7,
+    "Edit": 2
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.26125889999999996,
+   "num_turns": 19,
+   "duration_ms": 109141,
+   "is_error": false,
+   "input_tokens": 154,
+   "output_tokens": 10564,
+   "cache_read": 937389,
+   "cache_write": 57273,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.03s"
+   ],
+   "first_fault_edit_turn": 25
+  },
+  {
+   "task": "tabulate-12",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 1",
+   "stderr_tail": "",
+   "wall_s": 463.4,
+   "turns": 139,
+   "tools": {
+    "Bash": 33,
+    "Read": 18,
+    "Glob": 1,
+    "Edit": 8
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.7018844000000002,
+   "num_turns": 61,
+   "duration_ms": 459750,
+   "is_error": true,
+   "input_tokens": 482,
+   "output_tokens": 49313,
+   "cache_read": 2927054,
+   "cache_write": 81066,
+   "target_pass": false,
+   "suite_pass": false,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": false,
+   "success": false,
+   "suite_tail": [
+    "8 failed, 295 passed, 16 skipped in 1.16s"
+   ],
+   "first_fault_edit_turn": 74
+  },
+  {
+   "task": "tabulate-12",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 190.6,
+   "turns": 51,
+   "tools": {
+    "Bash": 7,
+    "Read": 5,
+    "Glob": 1,
+    "Grep": 4,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 31,
+   "hook_pushes": 0,
+   "cost_usd": 0.2575581,
+   "num_turns": 20,
+   "duration_ms": 187013,
+   "is_error": false,
+   "input_tokens": 162,
+   "output_tokens": 22233,
+   "cache_read": 552871,
+   "cache_write": 45472,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.05s"
+   ],
+   "first_fault_edit_turn": 40
+  },
+  {
+   "task": "sqlparse-12",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 132.3,
+   "turns": 38,
+   "tools": {
+    "Bash": 6,
+    "Read": 5,
+    "mcp__whyslice__why": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 17,
+   "hook_pushes": 1,
+   "cost_usd": 0.1810531,
+   "num_turns": 15,
+   "duration_ms": 128160,
+   "is_error": false,
+   "input_tokens": 122,
+   "output_tokens": 13514,
+   "cache_read": 411251,
+   "cache_write": 36118,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/reindent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.01s"
+   ],
+   "first_fault_edit_turn": 27
+  },
+  {
+   "task": "sqlparse-12",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 108.7,
+   "turns": 61,
+   "tools": {
+    "Bash": 16,
+    "Read": 5,
+    "Glob": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.14361450000000003,
+   "num_turns": 24,
+   "duration_ms": 104536,
+   "is_error": false,
+   "input_tokens": 194,
+   "output_tokens": 8519,
+   "cache_read": 544795,
+   "cache_write": 23173,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.44s"
+   ],
+   "first_fault_edit_turn": 40
+  },
+  {
+   "task": "sqlparse-12",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 145.9,
+   "turns": 69,
+   "tools": {
+    "Bash": 17,
+    "mcp__whyslice__record_failure": 1,
+    "Read": 6,
+    "Write": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 8,
+   "hook_pushes": 0,
+   "cost_usd": 0.2131729,
+   "num_turns": 27,
+   "duration_ms": 141512,
+   "is_error": false,
+   "input_tokens": 218,
+   "output_tokens": 14790,
+   "cache_read": 757529,
+   "cache_write": 31626,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/reindent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.25s"
+   ],
+   "first_fault_edit_turn": 58
+  },
+  {
+   "task": "sqlparse-07",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 121.9,
+   "turns": 39,
+   "tools": {
+    "Bash": 9,
+    "Read": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 2,
+   "cost_usd": 0.1638663,
+   "num_turns": 15,
+   "duration_ms": 117084,
+   "is_error": false,
+   "input_tokens": 122,
+   "output_tokens": 10855,
+   "cache_read": 447273,
+   "cache_write": 32371,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.43s"
+   ],
+   "first_fault_edit_turn": 27
+  },
+  {
+   "task": "sqlparse-07",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 154.6,
+   "turns": 55,
+   "tools": {
+    "Bash": 14,
+    "Read": 6,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.23015460000000001,
+   "num_turns": 22,
+   "duration_ms": 150268,
+   "is_error": false,
+   "input_tokens": 178,
+   "output_tokens": 16674,
+   "cache_read": 666846,
+   "cache_write": 39961,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.38s"
+   ],
+   "first_fault_edit_turn": 41
+  },
+  {
+   "task": "sqlparse-07",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 105.9,
+   "turns": 53,
+   "tools": {
+    "Bash": 11,
+    "Read": 5,
+    "Glob": 1,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 22,
+   "hook_pushes": 0,
+   "cost_usd": 0.19601079999999999,
+   "num_turns": 20,
+   "duration_ms": 102009,
+   "is_error": false,
+   "input_tokens": 162,
+   "output_tokens": 9306,
+   "cache_read": 688568,
+   "cache_write": 40231,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.23s"
+   ],
+   "first_fault_edit_turn": 34
+  },
+  {
+   "task": "sqlparse-09",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 157.5,
+   "turns": 44,
+   "tools": {
+    "Bash": 10,
+    "Read": 3,
+    "mcp__whyslice__why": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 11,
+   "hook_pushes": 2,
+   "cost_usd": 0.2006112,
+   "num_turns": 16,
+   "duration_ms": 153109,
+   "is_error": false,
+   "input_tokens": 130,
+   "output_tokens": 15065,
+   "cache_read": 544062,
+   "cache_write": 35375,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.13s"
+   ],
+   "first_fault_edit_turn": 28
+  },
+  {
+   "task": "sqlparse-09",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 105.8,
+   "turns": 38,
+   "tools": {
+    "Bash": 9,
+    "Read": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.1309805,
+   "num_turns": 14,
+   "duration_ms": 100465,
+   "is_error": false,
+   "input_tokens": 114,
+   "output_tokens": 9759,
+   "cache_read": 322875,
+   "cache_write": 24892,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.01s"
+   ],
+   "first_fault_edit_turn": 27
+  },
+  {
+   "task": "sqlparse-09",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 87.7,
+   "turns": 43,
+   "tools": {
+    "Bash": 10,
+    "Read": 3,
+    "mcp__whyslice__record_failure": 1,
+    "mcp__whyslice__why": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 14,
+   "hook_pushes": 0,
+   "cost_usd": 0.1323529,
+   "num_turns": 17,
+   "duration_ms": 83499,
+   "is_error": false,
+   "input_tokens": 138,
+   "output_tokens": 6619,
+   "cache_read": 454899,
+   "cache_write": 26815,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.03s"
+   ],
+   "first_fault_edit_turn": 27
+  },
+  {
+   "task": "sqlparse-08",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 167.7,
+   "turns": 50,
+   "tools": {
+    "Bash": 8,
+    "Read": 4,
+    "mcp__whyslice__why": 2,
+    "Edit": 3
+   },
+   "first_whyslice_turn": 14,
+   "hook_pushes": 2,
+   "cost_usd": 0.26249859999999997,
+   "num_turns": 18,
+   "duration_ms": 161687,
+   "is_error": false,
+   "input_tokens": 146,
+   "output_tokens": 17585,
+   "cache_read": 703756,
+   "cache_write": 52026,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 2.45s"
+   ],
+   "first_fault_edit_turn": 20
+  },
+  {
+   "task": "sqlparse-08",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 178.5,
+   "turns": 70,
+   "tools": {
+    "Bash": 23,
+    "Read": 3,
+    "Edit": 2
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.26418490000000006,
+   "num_turns": 29,
+   "duration_ms": 174117,
+   "is_error": false,
+   "input_tokens": 234,
+   "output_tokens": 18932,
+   "cache_read": 898129,
+   "cache_write": 39739,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/filters/aligned_indent.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.49s"
+   ],
+   "first_fault_edit_turn": 38
+  },
+  {
+   "task": "sqlparse-08",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 195.8,
+   "turns": 87,
+   "tools": {
+    "Bash": 24,
+    "Read": 7,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 3
+   },
+   "first_whyslice_turn": 22,
+   "hook_pushes": 0,
+   "cost_usd": 0.26486950000000004,
+   "num_turns": 36,
+   "duration_ms": 191510,
+   "is_error": false,
+   "input_tokens": 290,
+   "output_tokens": 19340,
+   "cache_read": 990215,
+   "cache_write": 34429,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.25s"
+   ],
+   "first_fault_edit_turn": 43
+  },
+  {
+   "task": "sqlparse-06",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 143.9,
+   "turns": 38,
+   "tools": {
+    "Bash": 9,
+    "Read": 3,
+    "mcp__whyslice__why": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 17,
+   "hook_pushes": 1,
+   "cost_usd": 0.19519550000000002,
+   "num_turns": 15,
+   "duration_ms": 139549,
+   "is_error": false,
+   "input_tokens": 122,
+   "output_tokens": 16023,
+   "cache_read": 449825,
+   "cache_write": 34988,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.34s"
+   ],
+   "first_fault_edit_turn": 20
+  },
+  {
+   "task": "sqlparse-06",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 122.9,
+   "turns": 45,
+   "tools": {
+    "Bash": 11,
+    "Read": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.1590051,
+   "num_turns": 16,
+   "duration_ms": 118663,
+   "is_error": false,
+   "input_tokens": 130,
+   "output_tokens": 13090,
+   "cache_read": 400891,
+   "cache_write": 26668,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.18s"
+   ],
+   "first_fault_edit_turn": 25
+  },
+  {
+   "task": "sqlparse-06",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 149.7,
+   "turns": 48,
+   "tools": {
+    "Bash": 9,
+    "Read": 6,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 17,
+   "hook_pushes": 0,
+   "cost_usd": 0.1951885,
+   "num_turns": 18,
+   "duration_ms": 145148,
+   "is_error": false,
+   "input_tokens": 146,
+   "output_tokens": 16641,
+   "cache_read": 478055,
+   "cache_write": 32016,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/statement_splitter.py"
+   ],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.58s"
+   ],
+   "first_fault_edit_turn": 31
+  },
+  {
+   "task": "sqlparse-01",
+   "library": "sqlparse",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 214.1,
+   "turns": 105,
+   "tools": {
+    "Bash": 21,
+    "Read": 15,
+    "Grep": 2,
+    "mcp__whyslice__why": 1,
+    "Edit": 2
+   },
+   "first_whyslice_turn": 17,
+   "hook_pushes": 2,
+   "cost_usd": 0.4027565,
+   "num_turns": 42,
+   "duration_ms": 208633,
+   "is_error": false,
+   "input_tokens": 338,
+   "output_tokens": 19537,
+   "cache_read": 1729555,
+   "cache_write": 65889,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.53s"
+   ],
+   "first_fault_edit_turn": 72
+  },
+  {
+   "task": "sqlparse-01",
+   "library": "sqlparse",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 111.2,
+   "turns": 59,
+   "tools": {
+    "Bash": 14,
+    "Read": 10,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.1592267,
+   "num_turns": 26,
+   "duration_ms": 105874,
+   "is_error": false,
+   "input_tokens": 210,
+   "output_tokens": 10727,
+   "cache_read": 584217,
+   "cache_write": 23480,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.51s"
+   ],
+   "first_fault_edit_turn": 48
+  },
+  {
+   "task": "sqlparse-01",
+   "library": "sqlparse",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 103.2,
+   "turns": 68,
+   "tools": {
+    "Bash": 15,
+    "Read": 5,
+    "mcp__whyslice__record_failure": 1,
+    "Write": 2,
+    "Glob": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 11,
+   "hook_pushes": 0,
+   "cost_usd": 0.21424830000000003,
+   "num_turns": 26,
+   "duration_ms": 97671,
+   "is_error": false,
+   "input_tokens": 210,
+   "output_tokens": 9202,
+   "cache_read": 802243,
+   "cache_write": 43902,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "sqlparse/engine/grouping.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "506 passed, 2 xfailed, 1 xpassed in 1.42s"
+   ],
+   "first_fault_edit_turn": 54
+  },
+  {
+   "task": "tabulate-06",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 47.5,
+   "turns": 34,
+   "tools": {
+    "Bash": 6,
+    "Read": 4,
+    "Grep": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.14575519999999997,
+   "num_turns": 13,
+   "duration_ms": 43902,
+   "is_error": false,
+   "input_tokens": 106,
+   "output_tokens": 3435,
+   "cache_read": 467082,
+   "cache_write": 40883,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.03s"
+   ],
+   "first_fault_edit_turn": 23
+  },
+  {
+   "task": "tabulate-06",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 42.9,
+   "turns": 30,
+   "tools": {
+    "Bash": 7,
+    "Read": 4,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.0617712,
+   "num_turns": 13,
+   "duration_ms": 39450,
+   "is_error": false,
+   "input_tokens": 106,
+   "output_tokens": 3494,
+   "cache_read": 213312,
+   "cache_write": 11432,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.04s"
+   ],
+   "first_fault_edit_turn": 23
+  },
+  {
+   "task": "tabulate-06",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 57.0,
+   "turns": 39,
+   "tools": {
+    "Bash": 9,
+    "Read": 4,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 25,
+   "hook_pushes": 0,
+   "cost_usd": 0.0878997,
+   "num_turns": 16,
+   "duration_ms": 53230,
+   "is_error": false,
+   "input_tokens": 130,
+   "output_tokens": 3883,
+   "cache_read": 308727,
+   "cache_write": 18741,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.08s"
+   ],
+   "first_fault_edit_turn": 31
+  },
+  {
+   "task": "tabulate-01",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 44.2,
+   "turns": 25,
+   "tools": {
+    "Bash": 5,
+    "Read": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.10498439999999999,
+   "num_turns": 9,
+   "duration_ms": 40330,
+   "is_error": false,
+   "input_tokens": 74,
+   "output_tokens": 3138,
+   "cache_read": 224584,
+   "cache_write": 33381,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.14s"
+   ],
+   "first_fault_edit_turn": 17
+  },
+  {
+   "task": "tabulate-01",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 143.1,
+   "turns": 81,
+   "tools": {
+    "Bash": 19,
+    "Read": 15,
+    "Grep": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.22063850000000002,
+   "num_turns": 37,
+   "duration_ms": 139268,
+   "is_error": false,
+   "input_tokens": 298,
+   "output_tokens": 12767,
+   "cache_read": 962215,
+   "cache_write": 30142,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.04s"
+   ],
+   "first_fault_edit_turn": 70
+  },
+  {
+   "task": "tabulate-01",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 71.0,
+   "turns": 42,
+   "tools": {
+    "Bash": 6,
+    "Read": 4,
+    "Glob": 1,
+    "Grep": 1,
+    "mcp__whyslice__record_failure": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 20,
+   "hook_pushes": 0,
+   "cost_usd": 0.19077480000000002,
+   "num_turns": 16,
+   "duration_ms": 67288,
+   "is_error": false,
+   "input_tokens": 130,
+   "output_tokens": 5968,
+   "cache_read": 674148,
+   "cache_write": 46695,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.11s"
+   ],
+   "first_fault_edit_turn": 28
+  },
+  {
+   "task": "tabulate-08",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 68.1,
+   "turns": 49,
+   "tools": {
+    "Bash": 12,
+    "Read": 8,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.12577370000000002,
+   "num_turns": 22,
+   "duration_ms": 64451,
+   "is_error": false,
+   "input_tokens": 178,
+   "output_tokens": 5382,
+   "cache_read": 537397,
+   "cache_write": 22473,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [],
+   "edited_fault_line": false,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.08s"
+   ],
+   "first_fault_edit_turn": 33
+  },
+  {
+   "task": "tabulate-08",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 68.0,
+   "turns": 49,
+   "tools": {
+    "Bash": 10,
+    "Read": 7,
+    "Grep": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.19961520000000002,
+   "num_turns": 20,
+   "duration_ms": 64497,
+   "is_error": false,
+   "input_tokens": 162,
+   "output_tokens": 5601,
+   "cache_read": 834082,
+   "cache_write": 44020,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.09s"
+   ],
+   "first_fault_edit_turn": 38
+  },
+  {
+   "task": "tabulate-08",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 73.0,
+   "turns": 47,
+   "tools": {
+    "Bash": 6,
+    "Read": 7,
+    "Grep": 4,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 34,
+   "hook_pushes": 0,
+   "cost_usd": 0.20910199999999998,
+   "num_turns": 20,
+   "duration_ms": 68921,
+   "is_error": false,
+   "input_tokens": 162,
+   "output_tokens": 6441,
+   "cache_read": 839270,
+   "cache_write": 46404,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.22s"
+   ],
+   "first_fault_edit_turn": 37
+  },
+  {
+   "task": "tabulate-09",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 59.9,
+   "turns": 44,
+   "tools": {
+    "Bash": 8,
+    "Read": 6,
+    "Grep": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.17971870000000004,
+   "num_turns": 17,
+   "duration_ms": 56058,
+   "is_error": false,
+   "input_tokens": 138,
+   "output_tokens": 4122,
+   "cache_read": 702747,
+   "cache_write": 44348,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.21s"
+   ],
+   "first_fault_edit_turn": 26
+  },
+  {
+   "task": "tabulate-09",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 51.9,
+   "turns": 45,
+   "tools": {
+    "Bash": 8,
+    "Read": 9,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.09322420000000001,
+   "num_turns": 19,
+   "duration_ms": 48349,
+   "is_error": false,
+   "input_tokens": 154,
+   "output_tokens": 4029,
+   "cache_read": 372532,
+   "cache_write": 17836,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.11s"
+   ],
+   "first_fault_edit_turn": 37
+  },
+  {
+   "task": "tabulate-09",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 64.5,
+   "turns": 55,
+   "tools": {
+    "Bash": 12,
+    "Read": 8,
+    "Grep": 2,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.1107134,
+   "num_turns": 24,
+   "duration_ms": 59902,
+   "is_error": false,
+   "input_tokens": 194,
+   "output_tokens": 4814,
+   "cache_read": 496354,
+   "cache_write": 18407,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.02s"
+   ],
+   "first_fault_edit_turn": 47
+  },
+  {
+   "task": "tabulate-07",
+   "library": "tabulate",
+   "arm": "A2",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 86.9,
+   "turns": 39,
+   "tools": {
+    "Bash": 6,
+    "Read": 4,
+    "Grep": 3,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 1,
+   "cost_usd": 0.1980191,
+   "num_turns": 15,
+   "duration_ms": 83116,
+   "is_error": false,
+   "input_tokens": 122,
+   "output_tokens": 7448,
+   "cache_read": 640791,
+   "cache_write": 48289,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.06s"
+   ],
+   "first_fault_edit_turn": 28
+  },
+  {
+   "task": "tabulate-07",
+   "library": "tabulate",
+   "arm": "A0",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 83.8,
+   "turns": 54,
+   "tools": {
+    "Bash": 10,
+    "Read": 8,
+    "Grep": 1,
+    "Glob": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": null,
+   "hook_pushes": 0,
+   "cost_usd": 0.1195757,
+   "num_turns": 22,
+   "duration_ms": 80229,
+   "is_error": false,
+   "input_tokens": 178,
+   "output_tokens": 7082,
+   "cache_read": 451717,
+   "cache_write": 19408,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.07s"
+   ],
+   "first_fault_edit_turn": 43
+  },
+  {
+   "task": "tabulate-07",
+   "library": "tabulate",
+   "arm": "A1",
+   "seed": 1,
+   "model": "claude-haiku-4-5",
+   "status": "exit 0",
+   "stderr_tail": "",
+   "wall_s": 90.0,
+   "turns": 50,
+   "tools": {
+    "Bash": 12,
+    "Read": 7,
+    "mcp__whyslice__record_failure": 1,
+    "Edit": 1
+   },
+   "first_whyslice_turn": 24,
+   "hook_pushes": 0,
+   "cost_usd": 0.1510831,
+   "num_turns": 22,
+   "duration_ms": 86388,
+   "is_error": false,
+   "input_tokens": 178,
+   "output_tokens": 7965,
+   "cache_read": 557321,
+   "cache_write": 27674,
+   "target_pass": true,
+   "suite_pass": true,
+   "touched_tests": [],
+   "edited_files": [
+    "tabulate/__init__.py"
+   ],
+   "edited_fault_line": true,
+   "success": true,
+   "suite_tail": [
+    "303 passed, 16 skipped in 1.04s"
+   ],
+   "first_fault_edit_turn": 39
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+breadth_first_search         hit_rel=True hit_dyn=True slice=10/12 reach=1 sbfl=7.5 hybrid=6.0
+depth_first_search           hit_rel=True hit_dyn=True slice=7/7 reach=1 sbfl=1.0 hybrid=1.0
+detect_cycle                 hit_rel=True hit_dyn=True slice=5/7 reach=3 sbfl=5.5 hybrid=3.5
+bucketsort                   hit_rel=True hit_dyn=True slice=5/8 reach=2 sbfl=5.5 hybrid=3.5
+find_in_sorted               hit_rel=True hit_dyn=True slice=9/9 reach=None sbfl=1.0 hybrid=1.0
+flatten                      hit_rel=True hit_dyn=True slice=6/6 reach=2 sbfl=1.0 hybrid=1.0
+gcd                          hit_rel=True hit_dyn=True slice=3/3 reach=None sbfl=1.0 hybrid=1.0
+is_valid_parenthesization    hit_rel=True hit_dyn=True slice=2/7 reach=1 sbfl=1.5 hybrid=1.0
+kheapsort                    hit_rel=True hit_dyn=True slice=8/8 reach=4 sbfl=5.0 hybrid=5.0
+get_factors                  hit_rel=True hit_dyn=True slice=7/7 reach=2 sbfl=1.5 hybrid=1.5
+hanoi                        hit_rel=True hit_dyn=True slice=8/8 reach=4 sbfl=2.5 hybrid=2.5
+kth                          hit_rel=True hit_dyn=True slice=9/9 reach=1 sbfl=1.0 hybrid=1.0
+lcs_length                   hit_rel=True hit_dyn=True slice=8/8 reach=2 sbfl=1.5 hybrid=1.5
+lis                          hit_rel=True hit_dyn=True slice=10/11 reach=3 sbfl=3.0 hybrid=3.0
+max_sublist_sum              hit_rel=True hit_dyn=True slice=7/8 reach=4 sbfl=4.5 hybrid=4.0
+knapsack                     hit_rel=True hit_dyn=True slice=10/11 reach=2 sbfl=6.0 hybrid=5.5
+levenshtein                  hit_rel=True hit_dyn=True slice=6/6 reach=2 sbfl=2.0 hybrid=2.0
+minimum_spanning_tree        hit_rel=True hit_dyn=True slice=8/11 reach=1 sbfl=6.0 hybrid=4.5
+next_palindrome              hit_rel=True hit_dyn=True slice=9/10 reach=1 sbfl=1.0 hybrid=1.0
+find_first_in_sorted         hit_rel=True hit_dyn=True slice=8/8 reach=2 sbfl=5.0 hybrid=4.0
+pascal                       hit_rel=True hit_dyn=True slice=10/11 reach=5 sbfl=3.5 hybrid=3.5
+next_permutation             hit_rel=True hit_dyn=True slice=9/10 reach=4 sbfl=3.5 hybrid=3.0
+powerset                     hit_rel=True hit_dyn=True slice=7/7 reach=1 sbfl=2.0 hybrid=2.0
+mergesort                    hit_rel=True hit_dyn=True slice=6/8 reach=1 sbfl=6.0 hybrid=5.0
+reverse_linked_list          hit_rel=True hit_dyn=True slice=7/7 reach=None sbfl=2.0 hybrid=2.0
+possible_change              hit_rel=True hit_dyn=True slice=8/8 reach=1 sbfl=5.0 hybrid=5.0
+longest_common_subsequence   hit_rel=True hit_dyn=True slice=6/6 reach=None sbfl=3.5 hybrid=3.5
+shortest_path_length         hit_rel=True hit_dyn=True slice=22/24 reach=10 sbfl=6.0 hybrid=5.5
+quicksort                    hit_rel=True hit_dyn=True slice=7/7 reach=2 sbfl=4.0 hybrid=4.0
+rpn_eval                     hit_rel=True hit_dyn=True slice=11/12 reach=2 sbfl=6.5 hybrid=6.0
+shortest_paths               hit_rel=False hit_dyn=False slice=4/8 reach=None sbfl=4.5 hybrid=None
+shortest_path_lengths        hit_rel=True hit_dyn=True slice=9/10 reach=1 sbfl=5.5 hybrid=5.0
+shunting_yard                hit_rel=False hit_dyn=False slice=9/11 reach=None sbfl=7.5 hybrid=None
+sieve                        hit_rel=True hit_dyn=False slice=5/5 reach=3 sbfl=1.0 hybrid=1.0
+topological_ordering         hit_rel=True hit_dyn=True slice=7/7 reach=3 sbfl=3.5 hybrid=3.5
+wrap                         hit_rel=True hit_dyn=True slice=8/8 reach=1 sbfl=4.5 hybrid=4.5
+to_base                      hit_rel=True hit_dyn=True slice=9/10 reach=1 sbfl=5.5 hybrid=5.0
+subsequences                 hit_rel=True hit_dyn=True slice=7/7 reach=6 sbfl=1.0 hybrid=1.0
+bitcount                     hit_rel=True hit_dyn=True slice=3/6 reach=1 sbfl=3.5 hybrid=2.0
+sqrt                         hit_rel=True hit_dyn=True slice=4/5 reach=1 sbfl=3.0 hybrid=2.5
+{
+ "programs_evaluated": 40,
+ "fault_in_slice_relevant": 0.95,
+ "fault_in_slice_classic": 0.925,
+ "fault_in_default_report": 0.85,
+ "median_executed_lines": 8.0,
+ "median_slice_lines_relevant": 7.5,
+ "median_slice_lines_classic": 7.0,
+ "median_slice_ratio_relevant": 0.9583333333333333,
+ "median_lines_read_before_fault": 2.0,
+ "sbfl_top1": 8,
+ "sbfl_top3": 17,
+ "sbfl_top5": 29,
+ "hybrid_top1": 9,
+ "hybrid_top3": 19,
+ "hybrid_top5": 34,
+ "truncated_runs": 3
+}

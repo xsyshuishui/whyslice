@@ -1,0 +1,22 @@
+{
+ "id": "sqlparse-03",
+ "library": "sqlparse",
+ "upstream_tag": "0.6.0",
+ "upstream_commit": "2f40da99b50d81135aecf96f6b08fcfa338a96de",
+ "failing_test": "tests/test_grouping.py::test_grouping_create_table",
+ "all_failing_tests": [
+  "tests/test_grouping.py::test_grouping_create_table"
+ ],
+ "test_command": ".venv/bin/python -m pytest tests/test_grouping.py::test_grouping_create_table",
+ "full_suite_command": ".venv/bin/python -m pytest tests",
+ "setup": "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r '{bench}/upstream/sqlparse.requirements.txt'",
+ "fault_file": "sqlparse/engine/grouping.py",
+ "fault_line": 386,
+ "fault_function": "group_functions",
+ "original_token": "True",
+ "mutated_token": "False",
+ "operator": "bool-const",
+ "depth": 5,
+ "fault_func_in_traceback": false,
+ "mutant_id": "sqlparse-m030"
+}

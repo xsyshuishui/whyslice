@@ -1,0 +1,51 @@
+{"task": "sqlparse-04", "hit_rel": true, "hit_dyn": false, "in_report": true, "suspect_rank": 1, "reach": 51, "lib_slice_lines": 158, "lib_executed_lines": 566, "error": null}
+{"task": "sqlparse-02", "hit_rel": true, "hit_dyn": true, "in_report": true, "suspect_rank": 2, "reach": 42, "lib_slice_lines": 225, "lib_executed_lines": 772, "error": null}
+{"task": "sqlparse-01", "hit_rel": false, "hit_dyn": false, "in_report": true, "suspect_rank": 2, "reach": null, "lib_slice_lines": 208, "lib_executed_lines": 769, "error": null}
+{"task": "sqlparse-03", "hit_rel": true, "hit_dyn": true, "in_report": true, "suspect_rank": 1, "reach": 145, "lib_slice_lines": 276, "lib_executed_lines": 799, "error": null}
+{"task": "sqlparse-06", "hit_rel": true, "hit_dyn": true, "in_report": false, "suspect_rank": 118, "reach": 15, "lib_slice_lines": 161, "lib_executed_lines": 569, "error": null}
+{"task": "sqlparse-05", "hit_rel": true, "hit_dyn": false, "in_report": false, "suspect_rank": 48, "reach": 47, "lib_slice_lines": 153, "lib_executed_lines": 564, "error": null}
+{"task": "sqlparse-07", "hit_rel": true, "hit_dyn": true, "in_report": false, "suspect_rank": null, "reach": 143, "lib_slice_lines": 494, "lib_executed_lines": 990, "error": null}
+{"task": "sqlparse-08", "hit_rel": false, "hit_dyn": false, "in_report": false, "suspect_rank": null, "reach": null, "lib_slice_lines": 449, "lib_executed_lines": 996, "error": null}
+{"task": "sqlparse-10", "hit_rel": true, "hit_dyn": true, "in_report": true, "suspect_rank": 2, "reach": 206, "lib_slice_lines": 436, "lib_executed_lines": 928, "error": null}
+{"task": "sqlparse-09", "hit_rel": false, "hit_dyn": false, "in_report": false, "suspect_rank": null, "reach": null, "lib_slice_lines": 444, "lib_executed_lines": 957, "error": null}
+{"task": "sqlparse-11", "hit_rel": true, "hit_dyn": true, "in_report": false, "suspect_rank": null, "reach": 282, "lib_slice_lines": 448, "lib_executed_lines": 980, "error": null}
+{"task": "tabulate-01", "hit_rel": true, "hit_dyn": true, "in_report": true, "suspect_rank": 3, "reach": 209, "lib_slice_lines": 314, "lib_executed_lines": 601, "error": null}
+{"task": "sqlparse-12", "hit_rel": false, "hit_dyn": false, "in_report": false, "suspect_rank": null, "reach": null, "lib_slice_lines": 514, "lib_executed_lines": 1047, "error": null}
+{"task": "tabulate-02", "hit_rel": true, "hit_dyn": true, "in_report": true, "suspect_rank": 1, "reach": 193, "lib_slice_lines": 278, "lib_executed_lines": 572, "error": null}
+{"task": "tabulate-03", "hit_rel": true, "hit_dyn": true, "in_report": true, "suspect_rank": 1, "reach": 192, "lib_slice_lines": 278, "lib_executed_lines": 572, "error": null}
+{"task": "tabulate-04", "hit_rel": true, "hit_dyn": true, "in_report": true, "suspect_rank": 1, "reach": 154, "lib_slice_lines": 275, "lib_executed_lines": 570, "error": null}
+{"task": "tabulate-05", "hit_rel": true, "hit_dyn": true, "in_report": true, "suspect_rank": 1, "reach": 180, "lib_slice_lines": 306, "lib_executed_lines": 597, "error": null}
+{"task": "tabulate-06", "hit_rel": true, "hit_dyn": true, "in_report": true, "suspect_rank": 1, "reach": 159, "lib_slice_lines": 319, "lib_executed_lines": 608, "error": null}
+{"task": "tabulate-07", "hit_rel": true, "hit_dyn": true, "in_report": false, "suspect_rank": 91, "reach": 183, "lib_slice_lines": 313, "lib_executed_lines": 600, "error": null}
+{"task": "tabulate-10", "hit_rel": true, "hit_dyn": true, "in_report": true, "suspect_rank": 4, "reach": 162, "lib_slice_lines": 318, "lib_executed_lines": 439, "error": null}
+{"task": "tabulate-08", "hit_rel": true, "hit_dyn": true, "in_report": false, "suspect_rank": 91, "reach": 183, "lib_slice_lines": 313, "lib_executed_lines": 600, "error": null}
+{"task": "tabulate-09", "hit_rel": true, "hit_dyn": true, "in_report": false, "suspect_rank": 22, "reach": 182, "lib_slice_lines": 278, "lib_executed_lines": 569, "error": null}
+{"task": "tabulate-11", "hit_rel": true, "hit_dyn": true, "in_report": true, "suspect_rank": 5, "reach": 284, "lib_slice_lines": 380, "lib_executed_lines": 664, "error": null}
+{"task": "tabulate-12", "hit_rel": true, "hit_dyn": true, "in_report": false, "suspect_rank": 66, "reach": 241, "lib_slice_lines": 373, "lib_executed_lines": 659, "error": null}
+{
+ "tasks": 24,
+ "evaluated": 24,
+ "fault_executed": 1.0,
+ "fault_in_slice_relevant": 0.8333333333333334,
+ "fault_in_slice_classic": 0.75,
+ "fault_in_default_report": 0.5416666666666666,
+ "fault_in_causal_tree": 0.0,
+ "suspect_top1": 7,
+ "suspect_top5": 13,
+ "suspect_top10": 13,
+ "median_lib_executed_lines": 604.5,
+ "median_lib_slice_lines": 313.0,
+ "median_slice_ratio": 0.486013986013986,
+ "median_reach_when_in_slice": 181.0,
+ "median_record_s": 2.1315,
+ "by_library": {
+  "sqlparse": {
+   "n": 12,
+   "hit_rel": 8
+  },
+  "tabulate": {
+   "n": 12,
+   "hit_rel": 12
+  }
+ }
+}

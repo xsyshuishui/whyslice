@@ -1,0 +1,11 @@
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -940,7 +940,7 @@
+             _isconvertible(float, string)
+             and (
+                 # some other type convertible to float
+-                isinstance(string, (str, bytes))
++                not isinstance(string, (str, bytes))
+                 # or, a numeric string eg. "1e1...", "NaN", ..., but isn't
+                 # just an over/underflow
+                 or (

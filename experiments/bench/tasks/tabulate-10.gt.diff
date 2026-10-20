@@ -1,0 +1,11 @@
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -1566,7 +1566,7 @@
+                 firstdict = rows[0] if len(rows) > 0 else {}
+                 keys.extend(firstdict.keys())
+                 uniq_keys.update(keys)
+-                rows = rows[0:]
++                rows = rows[1:]
+             for row in rows:
+                 for k in row.keys():
+                     # Save unique items in input order

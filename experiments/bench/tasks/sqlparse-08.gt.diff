@@ -1,0 +1,11 @@
+--- a/sqlparse/filters/aligned_indent.py
++++ b/sqlparse/filters/aligned_indent.py
+@@ -84,7 +84,7 @@
+                 tlist.insert_before(stmt, self.nl(offset_ - len(str(stmt))))
+             if cond:
+                 ws = sql.Token(T.Whitespace, self.char * (
+-                    max_cond_width + condition_width[i]))
++                    max_cond_width - condition_width[i]))
+                 tlist.insert_after(cond[-1], ws)
+ 
+     def _next_token(self, tlist, idx=-1):

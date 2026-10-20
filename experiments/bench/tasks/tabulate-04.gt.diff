@@ -1,0 +1,11 @@
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -200,7 +200,7 @@
+ 
+ 
+ def _textile_row_with_attrs(cell_values, colwidths, colaligns):
+-    cell_values[1] += " "
++    cell_values[0] += " "
+     alignment = {"left": "<.", "right": ">.", "center": "=.", "decimal": ">."}
+     values = "|".join(alignment.get(a, "") + v for a, v in zip(colaligns, cell_values))
+     return f"|{values}|"

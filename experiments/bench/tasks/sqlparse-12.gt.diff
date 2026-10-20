@@ -1,0 +1,11 @@
+--- a/sqlparse/filters/reindent.py
++++ b/sqlparse/filters/reindent.py
+@@ -225,7 +225,7 @@
+                     position += len(token.value) + 1
+                     if (self.wrap_after > 0
+                             and position > (self.wrap_after - self.offset)):
+-                        adjust = 1
++                        adjust = 0
+                         tlist.insert_before(token, self.nl(offset=adjust))
+                         position = 0
+         self._process_default(tlist)

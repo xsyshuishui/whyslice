@@ -1,0 +1,11 @@
+--- a/sqlparse/engine/statement_splitter.py
++++ b/sqlparse/engine/statement_splitter.py
+@@ -186,7 +186,7 @@
+                 self.consume_ws = True
+             elif (ttype not in (T.Whitespace, T.Newline, T.Comment.Single,
+                                 T.Comment.Multiline)
+-                  and not (ttype is T.Keyword or value.upper() == 'BEGIN')):
++                  and not (ttype is T.Keyword and value.upper() == 'BEGIN')):
+                 # Reset _seen_begin if we see a non-whitespace, non-comment
+                 # token but not for BEGIN itself (which just set the flag)
+                 self._seen_begin = False

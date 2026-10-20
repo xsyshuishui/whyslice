@@ -1,0 +1,24 @@
+{
+ "id": "sqlparse-05",
+ "library": "sqlparse",
+ "upstream_tag": "0.6.0",
+ "upstream_commit": "2f40da99b50d81135aecf96f6b08fcfa338a96de",
+ "failing_test": "tests/test_regressions.py::test_issue193_splitting_function",
+ "all_failing_tests": [
+  "tests/test_regressions.py::test_issue193_splitting_function",
+  "tests/test_regressions.py::test_issue194_splitting_function",
+  "tests/test_split.py::test_split_create_function[function.sql]"
+ ],
+ "test_command": ".venv/bin/python -m pytest tests/test_regressions.py::test_issue193_splitting_function",
+ "full_suite_command": ".venv/bin/python -m pytest tests",
+ "setup": "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r '{bench}/upstream/sqlparse.requirements.txt'",
+ "fault_file": "sqlparse/engine/statement_splitter.py",
+ "fault_line": 113,
+ "fault_function": "StatementSplitter._change_splitlevel",
+ "original_token": "not",
+ "mutated_token": "",
+ "operator": "remove-not",
+ "depth": 4,
+ "fault_func_in_traceback": false,
+ "mutant_id": "sqlparse-m073"
+}

@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pkl
+.pytest_cache/
+eval/data/
+eval/.venv-*/
+experiments/runs/
+experiments/bench/upstream/*/
+experiments/bench/tasks/*/
+**/.venv/
+experiments/runs*/
+experiments/pilot/
+experiments/bench/_work/
+experiments/bench/mutants/
+**/__pycache__/

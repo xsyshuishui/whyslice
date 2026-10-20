@@ -1,0 +1,24 @@
+{
+ "id": "tabulate-09",
+ "library": "tabulate",
+ "upstream_tag": "v0.10.0",
+ "upstream_commit": "3b4cd509820e4c45cd2aaba833aa585ea6308b94",
+ "failing_test": "test/test_output.py::test_preserve_whitespace",
+ "all_failing_tests": [
+  "test/test_output.py::test_preserve_whitespace",
+  "test/test_output.py::test_break_long_words",
+  "test/test_output.py::test_break_on_hyphens"
+ ],
+ "test_command": ".venv/bin/python -m pytest test/test_output.py::test_preserve_whitespace",
+ "full_suite_command": ".venv/bin/python -m pytest test",
+ "setup": "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r '{bench}/upstream/tabulate.requirements.txt'",
+ "fault_file": "tabulate/__init__.py",
+ "fault_line": 1189,
+ "fault_function": "_align_column_choose_padfn",
+ "original_token": "not",
+ "mutated_token": "",
+ "operator": "remove-not",
+ "depth": 3,
+ "fault_func_in_traceback": false,
+ "mutant_id": "tabulate-m072"
+}

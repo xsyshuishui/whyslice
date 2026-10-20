@@ -1,0 +1,22 @@
+{
+ "id": "tabulate-10",
+ "library": "tabulate",
+ "upstream_tag": "v0.10.0",
+ "upstream_commit": "3b4cd509820e4c45cd2aaba833aa585ea6308b94",
+ "failing_test": "test/test_input.py::test_list_of_dicts_firstrow",
+ "all_failing_tests": [
+  "test/test_input.py::test_list_of_dicts_firstrow"
+ ],
+ "test_command": ".venv/bin/python -m pytest test/test_input.py::test_list_of_dicts_firstrow",
+ "full_suite_command": ".venv/bin/python -m pytest test",
+ "setup": "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r '{bench}/upstream/tabulate.requirements.txt'",
+ "fault_file": "tabulate/__init__.py",
+ "fault_line": 1569,
+ "fault_function": "_normalize_tabular_data",
+ "original_token": "1",
+ "mutated_token": "0",
+ "operator": "int-1",
+ "depth": 2,
+ "fault_func_in_traceback": false,
+ "mutant_id": "tabulate-m121"
+}

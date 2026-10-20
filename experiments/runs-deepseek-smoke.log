@@ -1,0 +1,7 @@
+6 runs
+{"task": "tabulate-01", "arm": "A0", "seed": 1, "success": true, "turns": 11, "cost_usd": 0.094275, "tools": {"Bash": 4, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "tabulate-01", "arm": "A2", "seed": 1, "success": true, "turns": 19, "cost_usd": 0.141187, "tools": {"Bash": 5, "Read": 2, "Edit": 1}, "hook_pushes": 1, "status": "exit 0", "error": null}
+{"task": "tabulate-01", "arm": "A1", "seed": 1, "success": true, "turns": 39, "cost_usd": 0.2540510000000001, "tools": {"Bash": 15, "Read": 2, "Edit": 1}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-02", "arm": "A0", "seed": 1, "success": true, "turns": 69, "cost_usd": 0.5749010000000001, "tools": {"Bash": 21, "Grep": 2, "Read": 8, "Write": 3, "Edit": 2}, "hook_pushes": 0, "status": "exit 0", "error": null}
+{"task": "sqlparse-02", "arm": "A2", "seed": 1, "success": true, "turns": 75, "cost_usd": 0.8854989999999998, "tools": {"Bash": 28, "Read": 4, "Grep": 3, "Edit": 1}, "hook_pushes": 4, "status": "exit 0", "error": null}
+{"task": "sqlparse-02", "arm": "A1", "seed": 1, "success": true, "turns": 68, "cost_usd": 0.7296019999999999, "tools": {"Bash": 16, "Grep": 3, "Read": 6, "Write": 4, "Edit": 2}, "hook_pushes": 0, "status": "exit 0", "error": null}

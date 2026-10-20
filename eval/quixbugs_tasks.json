@@ -1,0 +1,1514 @@
+[
+ {
+  "program": "bitcount",
+  "buggy_path": "python_programs/bitcount.py",
+  "correct_path": "correct_python_programs/bitcount.py",
+  "test_file": "python_testcases/test_bitcount.py",
+  "fault_lines": [
+   5
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   5
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [],
+  "timeout_tests": [
+   "python_testcases/test_bitcount.py::test_bitcount[input_data0-7]",
+   "python_testcases/test_bitcount.py::test_bitcount[input_data1-1]",
+   "python_testcases/test_bitcount.py::test_bitcount[input_data2-9]",
+   "python_testcases/test_bitcount.py::test_bitcount[input_data3-3]",
+   "python_testcases/test_bitcount.py::test_bitcount[input_data4-3]",
+   "python_testcases/test_bitcount.py::test_bitcount[input_data5-4]",
+   "python_testcases/test_bitcount.py::test_bitcount[input_data6-4]",
+   "python_testcases/test_bitcount.py::test_bitcount[input_data7-7]",
+   "python_testcases/test_bitcount.py::test_bitcount[input_data8-1]"
+  ],
+  "passing_tests": [],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "5": 9
+  },
+  "runtime_buggy_s": 45.37,
+  "runtime_correct_s": 0.26,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L5 `n ^= n - 1` -> `n &= n - 1`. `n ^= n - 1` never reaches 0: every test loops forever (timeout-only program). 9/9 timeouts persist at 30 s (non-terminating, not slow)."
+ },
+ {
+  "program": "breadth_first_search",
+  "buggy_path": "python_programs/breadth_first_search.py",
+  "correct_path": "correct_python_programs/breadth_first_search.py",
+  "test_file": "python_testcases/test_breadth_first_search.py",
+  "fault_lines": [
+   11
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   11
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_breadth_first_search.py::test3"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_breadth_first_search.py::test1",
+   "python_testcases/test_breadth_first_search.py::test2",
+   "python_testcases/test_breadth_first_search.py::test4",
+   "python_testcases/test_breadth_first_search.py::test5"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "11": 1
+  },
+  "runtime_buggy_s": 0.25,
+  "runtime_correct_s": 0.23,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L11 `while True:` -> `while queue:`. Only the unreachable-goal case (test3) fails: IndexError, pop from an empty deque. No JSON testcases: inputs are built inside the test functions from python_testcases/node.py (Node objects)."
+ },
+ {
+  "program": "bucketsort",
+  "buggy_path": "python_programs/bucketsort.py",
+  "correct_path": "correct_python_programs/bucketsort.py",
+  "test_file": "python_testcases/test_bucketsort.py",
+  "fault_lines": [
+   7
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   7
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_bucketsort.py::test_bucketsort[input_data1-expected1]",
+   "python_testcases/test_bucketsort.py::test_bucketsort[input_data2-expected2]",
+   "python_testcases/test_bucketsort.py::test_bucketsort[input_data3-expected3]",
+   "python_testcases/test_bucketsort.py::test_bucketsort[input_data4-expected4]",
+   "python_testcases/test_bucketsort.py::test_bucketsort[input_data5-expected5]",
+   "python_testcases/test_bucketsort.py::test_bucketsort[input_data6-expected6]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_bucketsort.py::test_bucketsort[input_data0-expected0]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "7": 6
+  },
+  "runtime_buggy_s": 0.29,
+  "runtime_correct_s": 0.23,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L7 `for i, count in enumerate(arr):` -> `for i, count in enumerate(counts):`. Wrong output (iterates the input instead of the counts). The alternative at correct_python_programs/bucketsort.py:14 (modified [8]) fails 4 test(s) as written; not used."
+ },
+ {
+  "program": "depth_first_search",
+  "buggy_path": "python_programs/depth_first_search.py",
+  "correct_path": "correct_python_programs/depth_first_search.py",
+  "test_file": "python_testcases/test_depth_first_search.py",
+  "fault_lines": [
+   9,
+   10
+  ],
+  "fault_kind": "missing",
+  "fault_stmt_lines": [
+   7,
+   10
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_depth_first_search.py::test5"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_depth_first_search.py::test1",
+   "python_testcases/test_depth_first_search.py::test2",
+   "python_testcases/test_depth_first_search.py::test3",
+   "python_testcases/test_depth_first_search.py::test4"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "9": 0,
+   "10": 1
+  },
+  "runtime_buggy_s": 0.25,
+  "runtime_correct_s": 0.22,
+  "slowest_correct_test_s": 0.0003,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: inserts `nodesvisited.add(node)` between L9 and L10. Only the cyclic graph (test5) fails: unbounded recursion -> RecursionError (~1000 frames). Anchor line 9 is an `else:` header with no bytecode of its own. No JSON testcases: inputs are built inside the test functions from python_testcases/node.py (Node objects). The innermost statements containing the fault line(s) start at [7, 10] (fault_stmt_lines). Line(s) [9] emit no LINE event in any failing test, so no dynamic slice can contain them."
+ },
+ {
+  "program": "detect_cycle",
+  "buggy_path": "python_programs/detect_cycle.py",
+  "correct_path": "correct_python_programs/detect_cycle.py",
+  "test_file": "python_testcases/test_detect_cycle.py",
+  "fault_lines": [
+   5
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   5
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_detect_cycle.py::test4"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_detect_cycle.py::test1",
+   "python_testcases/test_detect_cycle.py::test2",
+   "python_testcases/test_detect_cycle.py::test3",
+   "python_testcases/test_detect_cycle.py::test5",
+   "python_testcases/test_detect_cycle.py::test6"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "5": 1
+  },
+  "runtime_buggy_s": 0.23,
+  "runtime_correct_s": 0.22,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L5 `if hare.successor is None:` -> `if hare is None or hare.successor is None:`. Only test4 (2-node acyclic list) fails: AttributeError on `None.successor`. No JSON testcases: inputs are built inside the test functions from python_testcases/node.py (Node objects)."
+ },
+ {
+  "program": "find_first_in_sorted",
+  "buggy_path": "python_programs/find_first_in_sorted.py",
+  "correct_path": "correct_python_programs/find_first_in_sorted.py",
+  "test_file": "python_testcases/test_find_first_in_sorted.py",
+  "fault_lines": [
+   5
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   5
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_find_first_in_sorted.py::test_find_first_in_sorted[input_data1--1]"
+  ],
+  "timeout_tests": [
+   "python_testcases/test_find_first_in_sorted.py::test_find_first_in_sorted[input_data2--1]",
+   "python_testcases/test_find_first_in_sorted.py::test_find_first_in_sorted[input_data4--1]"
+  ],
+  "passing_tests": [
+   "python_testcases/test_find_first_in_sorted.py::test_find_first_in_sorted[input_data0-2]",
+   "python_testcases/test_find_first_in_sorted.py::test_find_first_in_sorted[input_data3-6]",
+   "python_testcases/test_find_first_in_sorted.py::test_find_first_in_sorted[input_data5-6]",
+   "python_testcases/test_find_first_in_sorted.py::test_find_first_in_sorted[input_data6-7]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "5": 3
+  },
+  "runtime_buggy_s": 10.25,
+  "runtime_correct_s": 0.22,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L5 `while lo <= hi:` -> `while lo < hi:`. x above the maximum -> IndexError (1 test); any other absent x -> infinite loop (2 timeouts). 2/2 timeouts persist at 30 s (non-terminating, not slow)."
+ },
+ {
+  "program": "find_in_sorted",
+  "buggy_path": "python_programs/find_in_sorted.py",
+  "correct_path": "correct_python_programs/find_in_sorted.py",
+  "test_file": "python_testcases/test_find_in_sorted.py",
+  "fault_lines": [
+   9
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   9
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_find_in_sorted.py::test_find_in_sorted[input_data1--1]",
+   "python_testcases/test_find_in_sorted.py::test_find_in_sorted[input_data6--1]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_find_in_sorted.py::test_find_in_sorted[input_data0-3]",
+   "python_testcases/test_find_in_sorted.py::test_find_in_sorted[input_data2-3]",
+   "python_testcases/test_find_in_sorted.py::test_find_in_sorted[input_data3-8]",
+   "python_testcases/test_find_in_sorted.py::test_find_in_sorted[input_data4--1]",
+   "python_testcases/test_find_in_sorted.py::test_find_in_sorted[input_data5-6]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "9": 2
+  },
+  "runtime_buggy_s": 0.44,
+  "runtime_correct_s": 0.36,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L9 `return binsearch(mid, end)` -> `return binsearch(mid + 1, end)`. Absent x -> unbounded recursion -> RecursionError."
+ },
+ {
+  "program": "flatten",
+  "buggy_path": "python_programs/flatten.py",
+  "correct_path": "correct_python_programs/flatten.py",
+  "test_file": "python_testcases/test_flatten.py",
+  "fault_lines": [
+   7
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   7
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_flatten.py::test_flatten[input_data0-expected0]",
+   "python_testcases/test_flatten.py::test_flatten[input_data2-expected2]",
+   "python_testcases/test_flatten.py::test_flatten[input_data3-expected3]",
+   "python_testcases/test_flatten.py::test_flatten[input_data4-expected4]",
+   "python_testcases/test_flatten.py::test_flatten[input_data5-expected5]",
+   "python_testcases/test_flatten.py::test_flatten[input_data6-expected6]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_flatten.py::test_flatten[input_data1-expected1]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "7": 6
+  },
+  "runtime_buggy_s": 0.36,
+  "runtime_correct_s": 0.27,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L7 `yield flatten(x)` -> `yield x`. Yields generator objects; assertion messages embed memory addresses (vary per run)."
+ },
+ {
+  "program": "gcd",
+  "buggy_path": "python_programs/gcd.py",
+  "correct_path": "correct_python_programs/gcd.py",
+  "test_file": "python_testcases/test_gcd.py",
+  "fault_lines": [
+   5
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   5
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_gcd.py::test_gcd[input_data1-13]",
+   "python_testcases/test_gcd.py::test_gcd[input_data2-1]",
+   "python_testcases/test_gcd.py::test_gcd[input_data3-20]",
+   "python_testcases/test_gcd.py::test_gcd[input_data4-18913]",
+   "python_testcases/test_gcd.py::test_gcd[input_data5-3]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_gcd.py::test_gcd[input_data0-17]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "5": 5
+  },
+  "runtime_buggy_s": 0.43,
+  "runtime_correct_s": 0.3,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L5 `return gcd(a % b, b)` -> `return gcd(b, a % b)`. Unbounded recursion -> RecursionError (5/6 tests)."
+ },
+ {
+  "program": "get_factors",
+  "buggy_path": "python_programs/get_factors.py",
+  "correct_path": "correct_python_programs/get_factors.py",
+  "test_file": "python_testcases/test_get_factors.py",
+  "fault_lines": [
+   10
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   10
+  ],
+  "alt_fault_lines": [
+   {
+    "kind": "modified",
+    "lines": [
+     6
+    ],
+    "correct_file_lines": [
+     13
+    ]
+   }
+  ],
+  "failing_tests": [
+   "python_testcases/test_get_factors.py::test_get_factors[input_data1-expected1]",
+   "python_testcases/test_get_factors.py::test_get_factors[input_data2-expected2]",
+   "python_testcases/test_get_factors.py::test_get_factors[input_data3-expected3]",
+   "python_testcases/test_get_factors.py::test_get_factors[input_data4-expected4]",
+   "python_testcases/test_get_factors.py::test_get_factors[input_data5-expected5]",
+   "python_testcases/test_get_factors.py::test_get_factors[input_data6-expected6]",
+   "python_testcases/test_get_factors.py::test_get_factors[input_data7-expected7]",
+   "python_testcases/test_get_factors.py::test_get_factors[input_data8-expected8]",
+   "python_testcases/test_get_factors.py::test_get_factors[input_data9-expected9]",
+   "python_testcases/test_get_factors.py::test_get_factors[input_data10-expected10]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_get_factors.py::test_get_factors[input_data0-expected0]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "10": 10
+  },
+  "runtime_buggy_s": 0.36,
+  "runtime_correct_s": 0.3,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L10 `return []` -> `return [n]`. Drops the last prime factor. Alternative fix(es) kept in correct_python_programs/get_factors.py at line(s) [13] pass all tests and change buggy line(s) [6] instead (alt_fault_lines)."
+ },
+ {
+  "program": "hanoi",
+  "buggy_path": "python_programs/hanoi.py",
+  "correct_path": "correct_python_programs/hanoi.py",
+  "test_file": "python_testcases/test_hanoi.py",
+  "fault_lines": [
+   6
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   6
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_hanoi.py::test_hanoi[input_data1-expected1]",
+   "python_testcases/test_hanoi.py::test_hanoi[input_data2-expected2]",
+   "python_testcases/test_hanoi.py::test_hanoi[input_data3-expected3]",
+   "python_testcases/test_hanoi.py::test_hanoi[input_data4-expected4]",
+   "python_testcases/test_hanoi.py::test_hanoi[input_data5-expected5]",
+   "python_testcases/test_hanoi.py::test_hanoi[input_data6-expected6]",
+   "python_testcases/test_hanoi.py::test_hanoi[input_data7-expected7]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_hanoi.py::test_hanoi[input_data0-expected0]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "6": 7
+  },
+  "runtime_buggy_s": 0.37,
+  "runtime_correct_s": 0.38,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L6 `steps.append((start, helper))` -> `steps.append((start, end))`. Wrong move list."
+ },
+ {
+  "program": "is_valid_parenthesization",
+  "buggy_path": "python_programs/is_valid_parenthesization.py",
+  "correct_path": "correct_python_programs/is_valid_parenthesization.py",
+  "test_file": "python_testcases/test_is_valid_parenthesization.py",
+  "fault_lines": [
+   12
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   12
+  ],
+  "alt_fault_lines": [
+   {
+    "kind": "missing",
+    "lines": [
+     10,
+     12
+    ],
+    "correct_file_lines": [
+     75,
+     88,
+     101
+    ]
+   }
+  ],
+  "failing_tests": [
+   "python_testcases/test_is_valid_parenthesization.py::test_is_valid_parenthesization[input_data2-False]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_is_valid_parenthesization.py::test_is_valid_parenthesization[input_data0-True]",
+   "python_testcases/test_is_valid_parenthesization.py::test_is_valid_parenthesization[input_data1-False]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "12": 1
+  },
+  "runtime_buggy_s": 0.3,
+  "runtime_correct_s": 0.32,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L12 `return True` -> `return depth == 0`. Accepts unclosed '('. Alternative fix(es) kept in correct_python_programs/is_valid_parenthesization.py at line(s) [75, 88, 101] pass all tests and insert code between buggy lines [10, 12] instead (alt_fault_lines)."
+ },
+ {
+  "program": "kheapsort",
+  "buggy_path": "python_programs/kheapsort.py",
+  "correct_path": "correct_python_programs/kheapsort.py",
+  "test_file": "python_testcases/test_kheapsort.py",
+  "fault_lines": [
+   7
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   7
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_kheapsort.py::test_kheapsort[input_data1-expected1]",
+   "python_testcases/test_kheapsort.py::test_kheapsort[input_data2-expected2]",
+   "python_testcases/test_kheapsort.py::test_kheapsort[input_data3-expected3]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_kheapsort.py::test_kheapsort[input_data0-expected0]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "7": 3
+  },
+  "runtime_buggy_s": 0.36,
+  "runtime_correct_s": 0.32,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L7 `for x in arr:` -> `for x in arr[k:]:`. Pushes the first k elements twice."
+ },
+ {
+  "program": "knapsack",
+  "buggy_path": "python_programs/knapsack.py",
+  "correct_path": "correct_python_programs/knapsack.py",
+  "test_file": "python_testcases/test_knapsack.py",
+  "fault_lines": [
+   12
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   12
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_knapsack.py::test_knapsack[input_data1-30]",
+   "python_testcases/test_knapsack.py::test_knapsack[input_data3-51]",
+   "python_testcases/test_knapsack.py::test_knapsack[input_data4-107]",
+   "python_testcases/test_knapsack.py::test_knapsack[input_data5-150]",
+   "python_testcases/test_knapsack.py::test_knapsack[input_data6-900]",
+   "python_testcases/test_knapsack.py::test_knapsack[input_data7-309]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_knapsack.py::test_knapsack[input_data0-19]",
+   "python_testcases/test_knapsack.py::test_knapsack[input_data2-1458]",
+   "python_testcases/test_knapsack.py::test_knapsack[input_data8-1735]"
+  ],
+  "skipped_tests": [
+   "python_testcases/test_knapsack.py::test_knapsack[input_data9-13549094]"
+  ],
+  "fault_line_hits": {
+   "12": 6
+  },
+  "runtime_buggy_s": 0.46,
+  "runtime_correct_s": 0.37,
+  "slowest_correct_test_s": 0.0124,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L12 `if weight < j:` -> `if weight <= j:`. Wrong optimum. The 10th case (README: ~4 min) is skipped unless --runslow, which the template does not pass. Skipped by the test file: test_knapsack[input_data9-13549094]."
+ },
+ {
+  "program": "kth",
+  "buggy_path": "python_programs/kth.py",
+  "correct_path": "correct_python_programs/kth.py",
+  "test_file": "python_testcases/test_kth.py",
+  "fault_lines": [
+   12
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   12
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_kth.py::test_kth[input_data0-5]",
+   "python_testcases/test_kth.py::test_kth[input_data1-7]",
+   "python_testcases/test_kth.py::test_kth[input_data5-6]",
+   "python_testcases/test_kth.py::test_kth[input_data6-322]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_kth.py::test_kth[input_data2-3]",
+   "python_testcases/test_kth.py::test_kth[input_data3-2]",
+   "python_testcases/test_kth.py::test_kth[input_data4-34]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "12": 4
+  },
+  "runtime_buggy_s": 0.44,
+  "runtime_correct_s": 0.28,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L12 `return kth(above, k)` -> `return kth(above, k - num_lessoreq)`. Recurses with the wrong k until the list is empty -> IndexError."
+ },
+ {
+  "program": "lcs_length",
+  "buggy_path": "python_programs/lcs_length.py",
+  "correct_path": "correct_python_programs/lcs_length.py",
+  "test_file": "python_testcases/test_lcs_length.py",
+  "fault_lines": [
+   9
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   9
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_lcs_length.py::test_lcs_length[input_data0-2]",
+   "python_testcases/test_lcs_length.py::test_lcs_length[input_data1-4]",
+   "python_testcases/test_lcs_length.py::test_lcs_length[input_data3-3]",
+   "python_testcases/test_lcs_length.py::test_lcs_length[input_data4-3]",
+   "python_testcases/test_lcs_length.py::test_lcs_length[input_data5-7]",
+   "python_testcases/test_lcs_length.py::test_lcs_length[input_data6-6]",
+   "python_testcases/test_lcs_length.py::test_lcs_length[input_data7-3]",
+   "python_testcases/test_lcs_length.py::test_lcs_length[input_data8-3]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_lcs_length.py::test_lcs_length[input_data2-0]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "9": 8
+  },
+  "runtime_buggy_s": 0.37,
+  "runtime_correct_s": 0.28,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L9 `dp[i, j] = dp[i - 1, j] + 1` -> `dp[i, j] = dp[i - 1, j - 1] + 1`. Wrong length."
+ },
+ {
+  "program": "levenshtein",
+  "buggy_path": "python_programs/levenshtein.py",
+  "correct_path": "correct_python_programs/levenshtein.py",
+  "test_file": "python_testcases/test_levenshtein.py",
+  "fault_lines": [
+   6
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   6
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_levenshtein.py::test_levenshtein[input_data0-3]",
+   "python_testcases/test_levenshtein.py::test_levenshtein[input_data1-3]",
+   "python_testcases/test_levenshtein.py::test_levenshtein[input_data2-8]",
+   "python_testcases/test_levenshtein.py::test_levenshtein[input_data4-2]",
+   "python_testcases/test_levenshtein.py::test_levenshtein[input_data6-4]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_levenshtein.py::test_levenshtein[input_data5-0]"
+  ],
+  "skipped_tests": [
+   "python_testcases/test_levenshtein.py::test_levenshtein[input_data3-42]"
+  ],
+  "fault_line_hits": {
+   "6": 5
+  },
+  "runtime_buggy_s": 3.25,
+  "runtime_correct_s": 2.61,
+  "slowest_correct_test_s": 2.2615,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L6 `return 1 + levenshtein(source[1:], target[1:])` -> `return levenshtein(source[1:], target[1:])`. Wrong distance. Exponential recursion: input_data2 takes ~1 s untraced; the test file always skips the 4th case. Skipped by the test file: test_levenshtein[input_data3-42]."
+ },
+ {
+  "program": "lis",
+  "buggy_path": "python_programs/lis.py",
+  "correct_path": "correct_python_programs/lis.py",
+  "test_file": "python_testcases/test_lis.py",
+  "fault_lines": [
+   14
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   14
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_lis.py::test_lis[input_data8-3]",
+   "python_testcases/test_lis.py::test_lis[input_data9-6]",
+   "python_testcases/test_lis.py::test_lis[input_data10-3]",
+   "python_testcases/test_lis.py::test_lis[input_data11-4]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_lis.py::test_lis[input_data0-0]",
+   "python_testcases/test_lis.py::test_lis[input_data1-1]",
+   "python_testcases/test_lis.py::test_lis[input_data2-4]",
+   "python_testcases/test_lis.py::test_lis[input_data3-1]",
+   "python_testcases/test_lis.py::test_lis[input_data4-4]",
+   "python_testcases/test_lis.py::test_lis[input_data5-1]",
+   "python_testcases/test_lis.py::test_lis[input_data6-3]",
+   "python_testcases/test_lis.py::test_lis[input_data7-2]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "14": 4
+  },
+  "runtime_buggy_s": 0.32,
+  "runtime_correct_s": 0.33,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L14 `longest = length + 1` -> `longest = max(longest, length + 1)`. Wrong length."
+ },
+ {
+  "program": "longest_common_subsequence",
+  "buggy_path": "python_programs/longest_common_subsequence.py",
+  "correct_path": "correct_python_programs/longest_common_subsequence.py",
+  "test_file": "python_testcases/test_longest_common_subsequence.py",
+  "fault_lines": [
+   6
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   6
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_longest_common_subsequence.py::test_longest_common_subsequence[input_data3-tsitest]",
+   "python_testcases/test_longest_common_subsequence.py::test_longest_common_subsequence[input_data5-bcba]",
+   "python_testcases/test_longest_common_subsequence.py::test_longest_common_subsequence[input_data6-TAAG]",
+   "python_testcases/test_longest_common_subsequence.py::test_longest_common_subsequence[input_data7-BCBA]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_longest_common_subsequence.py::test_longest_common_subsequence[input_data0-eadac]",
+   "python_testcases/test_longest_common_subsequence.py::test_longest_common_subsequence[input_data1-aary]",
+   "python_testcases/test_longest_common_subsequence.py::test_longest_common_subsequence[input_data2-MJAU]",
+   "python_testcases/test_longest_common_subsequence.py::test_longest_common_subsequence[input_data4-1234]",
+   "python_testcases/test_longest_common_subsequence.py::test_longest_common_subsequence[input_data8-BCD]",
+   "python_testcases/test_longest_common_subsequence.py::test_longest_common_subsequence[input_data9-begceb]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "6": 4
+  },
+  "runtime_buggy_s": 0.81,
+  "runtime_correct_s": 0.55,
+  "slowest_correct_test_s": 0.1895,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L6 `return a[0] + longest_common_subsequence(a[1:], b)` -> `return a[0] + longest_common_subsequence(a[1:], b[1:])`. Wrong subsequence; exponential recursion (slowest case ~0.2 s untraced)."
+ },
+ {
+  "program": "max_sublist_sum",
+  "buggy_path": "python_programs/max_sublist_sum.py",
+  "correct_path": "correct_python_programs/max_sublist_sum.py",
+  "test_file": "python_testcases/test_max_sublist_sum.py",
+  "fault_lines": [
+   7
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   7
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_max_sublist_sum.py::test_max_sublist_sum[input_data0-5]",
+   "python_testcases/test_max_sublist_sum.py::test_max_sublist_sum[input_data1-4]",
+   "python_testcases/test_max_sublist_sum.py::test_max_sublist_sum[input_data3-19]",
+   "python_testcases/test_max_sublist_sum.py::test_max_sublist_sum[input_data5-6]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_max_sublist_sum.py::test_max_sublist_sum[input_data2-12]",
+   "python_testcases/test_max_sublist_sum.py::test_max_sublist_sum[input_data4-0]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "7": 4
+  },
+  "runtime_buggy_s": 0.32,
+  "runtime_correct_s": 0.28,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L7 `max_ending_here = max_ending_here + x` -> `max_ending_here = max(0, max_ending_here + x)`. Wrong sum (running sum never reset)."
+ },
+ {
+  "program": "mergesort",
+  "buggy_path": "python_programs/mergesort.py",
+  "correct_path": "correct_python_programs/mergesort.py",
+  "test_file": "python_testcases/test_mergesort.py",
+  "fault_lines": [
+   17
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   17
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_mergesort.py::test_mergesort[input_data1-expected1]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data2-expected2]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data3-expected3]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data4-expected4]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data5-expected5]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data6-expected6]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data7-expected7]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data8-expected8]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data9-expected9]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data10-expected10]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data11-expected11]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data12-expected12]",
+   "python_testcases/test_mergesort.py::test_mergesort[input_data13-expected13]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_mergesort.py::test_mergesort[input_data0-expected0]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "17": 13
+  },
+  "runtime_buggy_s": 8.03,
+  "runtime_correct_s": 0.35,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L17 `if len(arr) == 0:` -> `if len(arr) <= 1:`. 1-element lists recurse forever -> RecursionError on every non-empty input (13/14 tests)."
+ },
+ {
+  "program": "minimum_spanning_tree",
+  "buggy_path": "python_programs/minimum_spanning_tree.py",
+  "correct_path": "correct_python_programs/minimum_spanning_tree.py",
+  "test_file": "python_testcases/test_minimum_spanning_tree.py",
+  "fault_lines": [
+   12
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   12
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_minimum_spanning_tree.py::test1",
+   "python_testcases/test_minimum_spanning_tree.py::test2",
+   "python_testcases/test_minimum_spanning_tree.py::test3"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "12": 3
+  },
+  "runtime_buggy_s": 0.26,
+  "runtime_correct_s": 0.24,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L12 `group_by_node[node].update(group_by_node[u])` -> `group_by_node[node] = group_by_node[u]`. Mutates the set being iterated -> RuntimeError on all 3 tests. Input is a dict of weighted edges. No JSON testcases: inputs are built inside the test functions."
+ },
+ {
+  "program": "next_palindrome",
+  "buggy_path": "python_programs/next_palindrome.py",
+  "correct_path": "correct_python_programs/next_palindrome.py",
+  "test_file": "python_testcases/test_next_palindrome.py",
+  "fault_lines": [
+   15
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   15
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_next_palindrome.py::test_next_palindrome[input_data4-expected4]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_next_palindrome.py::test_next_palindrome[input_data0-expected0]",
+   "python_testcases/test_next_palindrome.py::test_next_palindrome[input_data1-expected1]",
+   "python_testcases/test_next_palindrome.py::test_next_palindrome[input_data2-expected2]",
+   "python_testcases/test_next_palindrome.py::test_next_palindrome[input_data3-expected3]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "15": 1
+  },
+  "runtime_buggy_s": 0.26,
+  "runtime_correct_s": 0.25,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L15 `return [1] + (len(digit_list)) * [0] + [1]` -> `return [1] + (len(digit_list) - 1) * [0] + [1]`. Only the all-9s case fails (one zero too many)."
+ },
+ {
+  "program": "next_permutation",
+  "buggy_path": "python_programs/next_permutation.py",
+  "correct_path": "correct_python_programs/next_permutation.py",
+  "test_file": "python_testcases/test_next_permutation.py",
+  "fault_lines": [
+   6
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   6
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_next_permutation.py::test_next_permutation[input_data0-expected0]",
+   "python_testcases/test_next_permutation.py::test_next_permutation[input_data1-expected1]",
+   "python_testcases/test_next_permutation.py::test_next_permutation[input_data2-expected2]",
+   "python_testcases/test_next_permutation.py::test_next_permutation[input_data3-expected3]",
+   "python_testcases/test_next_permutation.py::test_next_permutation[input_data4-expected4]",
+   "python_testcases/test_next_permutation.py::test_next_permutation[input_data5-expected5]",
+   "python_testcases/test_next_permutation.py::test_next_permutation[input_data6-expected6]",
+   "python_testcases/test_next_permutation.py::test_next_permutation[input_data7-expected7]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "6": 8
+  },
+  "runtime_buggy_s": 0.31,
+  "runtime_correct_s": 0.26,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L6 `if perm[j] < perm[i]:` -> `if perm[i] < perm[j]:`. Wrong permutation on all 8 tests."
+ },
+ {
+  "program": "pascal",
+  "buggy_path": "python_programs/pascal.py",
+  "correct_path": "correct_python_programs/pascal.py",
+  "test_file": "python_testcases/test_pascal.py",
+  "fault_lines": [
+   6
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   6
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_pascal.py::test_pascal[input_data1-expected1]",
+   "python_testcases/test_pascal.py::test_pascal[input_data2-expected2]",
+   "python_testcases/test_pascal.py::test_pascal[input_data3-expected3]",
+   "python_testcases/test_pascal.py::test_pascal[input_data4-expected4]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_pascal.py::test_pascal[input_data0-expected0]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "6": 4
+  },
+  "runtime_buggy_s": 0.26,
+  "runtime_correct_s": 0.23,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L6 `for c in range(0, r):` -> `for c in range(0, r + 1):`. Rows one element short -> IndexError (3 tests) or wrong rows (1)."
+ },
+ {
+  "program": "possible_change",
+  "buggy_path": "python_programs/possible_change.py",
+  "correct_path": "correct_python_programs/possible_change.py",
+  "test_file": "python_testcases/test_possible_change.py",
+  "fault_lines": [
+   5
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   5
+  ],
+  "alt_fault_lines": [
+   {
+    "kind": "missing",
+    "lines": [
+     4,
+     5
+    ],
+    "correct_file_lines": [
+     39,
+     49
+    ]
+   }
+  ],
+  "failing_tests": [
+   "python_testcases/test_possible_change.py::test_possible_change[input_data1-4]",
+   "python_testcases/test_possible_change.py::test_possible_change[input_data2-121]",
+   "python_testcases/test_possible_change.py::test_possible_change[input_data3-18]",
+   "python_testcases/test_possible_change.py::test_possible_change[input_data4-16]",
+   "python_testcases/test_possible_change.py::test_possible_change[input_data5-568]",
+   "python_testcases/test_possible_change.py::test_possible_change[input_data6-786]",
+   "python_testcases/test_possible_change.py::test_possible_change[input_data7-817]",
+   "python_testcases/test_possible_change.py::test_possible_change[input_data8-981]",
+   "python_testcases/test_possible_change.py::test_possible_change[input_data9-20]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_possible_change.py::test_possible_change[input_data0-0]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "5": 9
+  },
+  "runtime_buggy_s": 0.64,
+  "runtime_correct_s": 0.46,
+  "slowest_correct_test_s": 0.0458,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L5 `if total < 0:` -> `if total < 0 or not coins:`. No empty-coins guard -> ValueError unpacking [] (9/10 tests). Alternative fix(es) kept in correct_python_programs/possible_change.py at line(s) [39, 49] pass all tests and insert code between buggy lines [4, 5] instead (alt_fault_lines)."
+ },
+ {
+  "program": "powerset",
+  "buggy_path": "python_programs/powerset.py",
+  "correct_path": "correct_python_programs/powerset.py",
+  "test_file": "python_testcases/test_powerset.py",
+  "fault_lines": [
+   6
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   6
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_powerset.py::test_powerset[input_data0-expected0]",
+   "python_testcases/test_powerset.py::test_powerset[input_data1-expected1]",
+   "python_testcases/test_powerset.py::test_powerset[input_data2-expected2]",
+   "python_testcases/test_powerset.py::test_powerset[input_data4-expected4]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_powerset.py::test_powerset[input_data3-expected3]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "6": 4
+  },
+  "runtime_buggy_s": 0.32,
+  "runtime_correct_s": 0.3,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L6 `return [[first] + subset for subset in rest_subsets]` -> `return rest_subsets + [[first] + subset for subset in rest_subsets]`. Loses the subsets without `first`."
+ },
+ {
+  "program": "quicksort",
+  "buggy_path": "python_programs/quicksort.py",
+  "correct_path": "correct_python_programs/quicksort.py",
+  "test_file": "python_testcases/test_quicksort.py",
+  "fault_lines": [
+   7
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   7
+  ],
+  "alt_fault_lines": [
+   {
+    "kind": "modified",
+    "lines": [
+     6
+    ],
+    "correct_file_lines": [
+     12
+    ]
+   }
+  ],
+  "failing_tests": [
+   "python_testcases/test_quicksort.py::test_quicksort[input_data1-expected1]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_quicksort.py::test_quicksort[input_data0-expected0]",
+   "python_testcases/test_quicksort.py::test_quicksort[input_data2-expected2]",
+   "python_testcases/test_quicksort.py::test_quicksort[input_data3-expected3]",
+   "python_testcases/test_quicksort.py::test_quicksort[input_data4-expected4]",
+   "python_testcases/test_quicksort.py::test_quicksort[input_data5-expected5]",
+   "python_testcases/test_quicksort.py::test_quicksort[input_data6-expected6]",
+   "python_testcases/test_quicksort.py::test_quicksort[input_data7-expected7]",
+   "python_testcases/test_quicksort.py::test_quicksort[input_data8-expected8]",
+   "python_testcases/test_quicksort.py::test_quicksort[input_data9-expected9]",
+   "python_testcases/test_quicksort.py::test_quicksort[input_data10-expected10]",
+   "python_testcases/test_quicksort.py::test_quicksort[input_data11-expected11]",
+   "python_testcases/test_quicksort.py::test_quicksort[input_data12-expected12]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "7": 1
+  },
+  "runtime_buggy_s": 0.33,
+  "runtime_correct_s": 0.31,
+  "slowest_correct_test_s": 0.0003,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L7 `greater = quicksort([x for x in arr[1:] if x > pivot])` -> `greater = quicksort([x for x in arr[1:] if x >= pivot])`. Drops elements equal to the pivot: only the one input with duplicates fails. Alternative fix(es) kept in correct_python_programs/quicksort.py at line(s) [12] pass all tests and change buggy line(s) [6] instead (alt_fault_lines)."
+ },
+ {
+  "program": "reverse_linked_list",
+  "buggy_path": "python_programs/reverse_linked_list.py",
+  "correct_path": "correct_python_programs/reverse_linked_list.py",
+  "test_file": "python_testcases/test_reverse_linked_list.py",
+  "fault_lines": [
+   5,
+   6
+  ],
+  "fault_kind": "missing",
+  "fault_stmt_lines": [
+   5,
+   6
+  ],
+  "alt_fault_lines": [
+   {
+    "kind": "modified",
+    "lines": [
+     6
+    ],
+    "correct_file_lines": [
+     12,
+     20
+    ]
+   }
+  ],
+  "failing_tests": [
+   "python_testcases/test_reverse_linked_list.py::test1",
+   "python_testcases/test_reverse_linked_list.py::test2"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_reverse_linked_list.py::test3"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "5": 2,
+   "6": 2
+  },
+  "runtime_buggy_s": 0.31,
+  "runtime_correct_s": 0.3,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: inserts `prevnode = node` between L5 and L6. Returns None for non-empty lists. No JSON testcases: inputs are built inside the test functions from python_testcases/node.py (Node objects). Alternative fix(es) kept in correct_python_programs/reverse_linked_list.py at line(s) [12, 20] pass all tests and change buggy line(s) [6] instead (alt_fault_lines)."
+ },
+ {
+  "program": "rpn_eval",
+  "buggy_path": "python_programs/rpn_eval.py",
+  "correct_path": "correct_python_programs/rpn_eval.py",
+  "test_file": "python_testcases/test_rpn_eval.py",
+  "fault_lines": [
+   20
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   19
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_rpn_eval.py::test_rpn_eval[input_data0-4.0]",
+   "python_testcases/test_rpn_eval.py::test_rpn_eval[input_data2-8.0]",
+   "python_testcases/test_rpn_eval.py::test_rpn_eval[input_data5-14.0]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_rpn_eval.py::test_rpn_eval[input_data1-4.0]",
+   "python_testcases/test_rpn_eval.py::test_rpn_eval[input_data3-14.0]",
+   "python_testcases/test_rpn_eval.py::test_rpn_eval[input_data4-23.0]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "20": 3
+  },
+  "runtime_buggy_s": 0.28,
+  "runtime_correct_s": 0.27,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L20 `op(token, a, b)` -> `op(token, b, a)`. Swapped operands: exactly the inputs with '-' or '/' fail. The correct file's alternative swaps them inside `op` (line 9) instead, but relies on an undefined `Stack` class. The innermost statements containing the fault line(s) start at [19] (fault_stmt_lines). The alternative at correct_python_programs/rpn_eval.py:26 (modified [9, 11, 15, 19]) fails 6 test(s) as written; not used."
+ },
+ {
+  "program": "shortest_path_length",
+  "buggy_path": "python_programs/shortest_path_length.py",
+  "correct_path": "correct_python_programs/shortest_path_length.py",
+  "test_file": "python_testcases/test_shortest_path_length.py",
+  "fault_lines": [
+   22
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   19
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_shortest_path_length.py::test1",
+   "python_testcases/test_shortest_path_length.py::test2"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_shortest_path_length.py::test3",
+   "python_testcases/test_shortest_path_length.py::test4"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "22": 2
+  },
+  "runtime_buggy_s": 0.29,
+  "runtime_correct_s": 0.29,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L22 `get(unvisited_nodes, nextnode) + length_by_edge[node, nextnode]` -> `distance + length_by_edge[node, nextnode]`. Wrong distances. No JSON testcases: inputs are built inside the test functions from python_testcases/node.py (Node objects). The innermost statements containing the fault line(s) start at [19] (fault_stmt_lines)."
+ },
+ {
+  "program": "shortest_path_lengths",
+  "buggy_path": "python_programs/shortest_path_lengths.py",
+  "correct_path": "correct_python_programs/shortest_path_lengths.py",
+  "test_file": "python_testcases/test_shortest_path_lengths.py",
+  "fault_lines": [
+   13
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   11
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_shortest_path_lengths.py::test1",
+   "python_testcases/test_shortest_path_lengths.py::test2",
+   "python_testcases/test_shortest_path_lengths.py::test3",
+   "python_testcases/test_shortest_path_lengths.py::test4"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "13": 4
+  },
+  "runtime_buggy_s": 0.33,
+  "runtime_correct_s": 0.3,
+  "slowest_correct_test_s": 0.0004,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L13 `length_by_path[i, k] + length_by_path[j, k]` -> `length_by_path[i, k] + length_by_path[k, j]`. Wrong distances on all 4 tests. Input is (n, dict of edge lengths). No JSON testcases: inputs are built inside the test functions. The innermost statements containing the fault line(s) start at [11] (fault_stmt_lines)."
+ },
+ {
+  "program": "shortest_paths",
+  "buggy_path": "python_programs/shortest_paths.py",
+  "correct_path": "correct_python_programs/shortest_paths.py",
+  "test_file": "python_testcases/test_shortest_paths.py",
+  "fault_lines": [
+   10
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   10
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_shortest_paths.py::test1",
+   "python_testcases/test_shortest_paths.py::test2",
+   "python_testcases/test_shortest_paths.py::test3"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "10": 3
+  },
+  "runtime_buggy_s": 0.31,
+  "runtime_correct_s": 0.27,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L10 `weight_by_edge[u, v] = min(` -> `weight_by_node[v] = min(`. Writes into the input dict instead of weight_by_node (mutates the test's input). Input is a dict of edge weights. No JSON testcases: inputs are built inside the test functions."
+ },
+ {
+  "program": "shunting_yard",
+  "buggy_path": "python_programs/shunting_yard.py",
+  "correct_path": "correct_python_programs/shunting_yard.py",
+  "test_file": "python_testcases/test_shunting_yard.py",
+  "fault_lines": [
+   17,
+   19
+  ],
+  "fault_kind": "missing",
+  "fault_stmt_lines": [
+   17,
+   19
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_shunting_yard.py::test_shunting_yard[input_data2-expected2]",
+   "python_testcases/test_shunting_yard.py::test_shunting_yard[input_data3-expected3]",
+   "python_testcases/test_shunting_yard.py::test_shunting_yard[input_data4-expected4]",
+   "python_testcases/test_shunting_yard.py::test_shunting_yard[input_data5-expected5]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_shunting_yard.py::test_shunting_yard[input_data0-expected0]",
+   "python_testcases/test_shunting_yard.py::test_shunting_yard[input_data1-expected1]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "17": 0,
+   "19": 4
+  },
+  "runtime_buggy_s": 0.24,
+  "runtime_correct_s": 0.23,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: inserts `opstack.append(token)` between L17 and L19. Operators are dropped. Anchor line 17 is the body of the inner `while`, which never runs in the buggy version (opstack stays empty). Line(s) [17] emit no LINE event in any failing test, so no dynamic slice can contain them."
+ },
+ {
+  "program": "sieve",
+  "buggy_path": "python_programs/sieve.py",
+  "correct_path": "correct_python_programs/sieve.py",
+  "test_file": "python_testcases/test_sieve.py",
+  "fault_lines": [
+   4
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   4
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_sieve.py::test_sieve[input_data1-expected1]",
+   "python_testcases/test_sieve.py::test_sieve[input_data2-expected2]",
+   "python_testcases/test_sieve.py::test_sieve[input_data3-expected3]",
+   "python_testcases/test_sieve.py::test_sieve[input_data4-expected4]",
+   "python_testcases/test_sieve.py::test_sieve[input_data5-expected5]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_sieve.py::test_sieve[input_data0-expected0]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "4": 5
+  },
+  "runtime_buggy_s": 0.24,
+  "runtime_correct_s": 0.18,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L4 `if any(n % p > 0 for p in primes):` -> `if all(n % p > 0 for p in primes):`. Returns []."
+ },
+ {
+  "program": "sqrt",
+  "buggy_path": "python_programs/sqrt.py",
+  "correct_path": "correct_python_programs/sqrt.py",
+  "test_file": "python_testcases/test_sqrt.py",
+  "fault_lines": [
+   4
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   4
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [],
+  "timeout_tests": [
+   "python_testcases/test_sqrt.py::test_sqrt[input_data0-1.4166666666666665]",
+   "python_testcases/test_sqrt.py::test_sqrt[input_data2-1.5]",
+   "python_testcases/test_sqrt.py::test_sqrt[input_data3-2]",
+   "python_testcases/test_sqrt.py::test_sqrt[input_data4-5.196164639727311]",
+   "python_testcases/test_sqrt.py::test_sqrt[input_data5-5.744627526262464]",
+   "python_testcases/test_sqrt.py::test_sqrt[input_data6-13.038404876679632]"
+  ],
+  "passing_tests": [
+   "python_testcases/test_sqrt.py::test_sqrt[input_data1-1.5]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "4": 6
+  },
+  "runtime_buggy_s": 30.21,
+  "runtime_correct_s": 0.15,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L4 `while abs(x - approx) > epsilon:` -> `while abs(x - approx ** 2) > epsilon:`. Loop exits only if the first Newton step lands within epsilon ([2, 0.5] passes): 6 timeouts, no assertion failure (timeout-only program). 6/6 timeouts persist at 30 s (non-terminating, not slow)."
+ },
+ {
+  "program": "subsequences",
+  "buggy_path": "python_programs/subsequences.py",
+  "correct_path": "correct_python_programs/subsequences.py",
+  "test_file": "python_testcases/test_subsequences.py",
+  "fault_lines": [
+   3
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   3
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_subsequences.py::test_subsequences[input_data0-expected0]",
+   "python_testcases/test_subsequences.py::test_subsequences[input_data3-expected3]",
+   "python_testcases/test_subsequences.py::test_subsequences[input_data4-expected4]",
+   "python_testcases/test_subsequences.py::test_subsequences[input_data5-expected5]",
+   "python_testcases/test_subsequences.py::test_subsequences[input_data6-expected6]",
+   "python_testcases/test_subsequences.py::test_subsequences[input_data7-expected7]",
+   "python_testcases/test_subsequences.py::test_subsequences[input_data8-expected8]",
+   "python_testcases/test_subsequences.py::test_subsequences[input_data9-expected9]",
+   "python_testcases/test_subsequences.py::test_subsequences[input_data10-expected10]",
+   "python_testcases/test_subsequences.py::test_subsequences[input_data11-expected11]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_subsequences.py::test_subsequences[input_data1-expected1]",
+   "python_testcases/test_subsequences.py::test_subsequences[input_data2-expected2]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "3": 10
+  },
+  "runtime_buggy_s": 0.17,
+  "runtime_correct_s": 0.16,
+  "slowest_correct_test_s": 0.0002,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L3 `return []` -> `return [[]]`. Base case returns [] so everything is []."
+ },
+ {
+  "program": "to_base",
+  "buggy_path": "python_programs/to_base.py",
+  "correct_path": "correct_python_programs/to_base.py",
+  "test_file": "python_testcases/test_to_base.py",
+  "fault_lines": [
+   9
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   9
+  ],
+  "alt_fault_lines": [
+   {
+    "kind": "modified",
+    "lines": [
+     10
+    ],
+    "correct_file_lines": [
+     14
+    ]
+   }
+  ],
+  "failing_tests": [
+   "python_testcases/test_to_base.py::test_to_base[input_data3-1F]",
+   "python_testcases/test_to_base.py::test_to_base[input_data4-101001]",
+   "python_testcases/test_to_base.py::test_to_base[input_data5-134]",
+   "python_testcases/test_to_base.py::test_to_base[input_data6-14]",
+   "python_testcases/test_to_base.py::test_to_base[input_data7-2A]",
+   "python_testcases/test_to_base.py::test_to_base[input_data8-E75]",
+   "python_testcases/test_to_base.py::test_to_base[input_data9-749]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [
+   "python_testcases/test_to_base.py::test_to_base[input_data0-1771]",
+   "python_testcases/test_to_base.py::test_to_base[input_data1-111]",
+   "python_testcases/test_to_base.py::test_to_base[input_data2-G]"
+  ],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "9": 7
+  },
+  "runtime_buggy_s": 0.17,
+  "runtime_correct_s": 0.15,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L9 `result = result + alphabet[i]` -> `result = alphabet[i] + result`. Digits come out reversed. Alternative fix(es) kept in correct_python_programs/to_base.py at line(s) [14] pass all tests and change buggy line(s) [10] instead (alt_fault_lines)."
+ },
+ {
+  "program": "topological_ordering",
+  "buggy_path": "python_programs/topological_ordering.py",
+  "correct_path": "correct_python_programs/topological_ordering.py",
+  "test_file": "python_testcases/test_topological_ordering.py",
+  "fault_lines": [
+   6
+  ],
+  "fault_kind": "modified",
+  "fault_stmt_lines": [
+   6
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_topological_ordering.py::test1",
+   "python_testcases/test_topological_ordering.py::test2",
+   "python_testcases/test_topological_ordering.py::test3"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "6": 3
+  },
+  "runtime_buggy_s": 0.17,
+  "runtime_correct_s": 0.15,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: L6 `if set(ordered_nodes).issuperset(nextnode.outgoing_nodes) and nextnode not in ordered_nodes:` -> `if set(ordered_nodes).issuperset(nextnode.incoming_nodes) and nextnode not in ordered_nodes:`. Wrong order on all 3 tests. No JSON testcases: inputs are built inside the test functions from python_testcases/node.py (Node objects)."
+ },
+ {
+  "program": "wrap",
+  "buggy_path": "python_programs/wrap.py",
+  "correct_path": "correct_python_programs/wrap.py",
+  "test_file": "python_testcases/test_wrap.py",
+  "fault_lines": [
+   8,
+   10
+  ],
+  "fault_kind": "missing",
+  "fault_stmt_lines": [
+   8,
+   10
+  ],
+  "alt_fault_lines": [],
+  "failing_tests": [
+   "python_testcases/test_wrap.py::test_wrap[input_data0-expected0]",
+   "python_testcases/test_wrap.py::test_wrap[input_data1-expected1]",
+   "python_testcases/test_wrap.py::test_wrap[input_data2-expected2]",
+   "python_testcases/test_wrap.py::test_wrap[input_data3-expected3]",
+   "python_testcases/test_wrap.py::test_wrap[input_data4-expected4]"
+  ],
+  "timeout_tests": [],
+  "passing_tests": [],
+  "skipped_tests": [],
+  "fault_line_hits": {
+   "8": 5,
+   "10": 5
+  },
+  "runtime_buggy_s": 0.17,
+  "runtime_correct_s": 0.15,
+  "slowest_correct_test_s": 0.0001,
+  "correct_version_passes": true,
+  "test_cmd_template": "../../.venv-quixbugs/bin/python -m pytest -c /dev/null --rootdir=. --confcutdir=. -p no:cacheprovider -q --timeout=5 --timeout-disable-debugger-detection '{node_id}'",
+  "notes": "Fix: inserts `lines.append(text)` between L8 and L10. Drops the final chunk on all 5 tests."
+ }
+]

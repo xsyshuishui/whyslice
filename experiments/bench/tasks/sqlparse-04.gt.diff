@@ -1,0 +1,11 @@
+--- a/sqlparse/engine/statement_splitter.py
++++ b/sqlparse/engine/statement_splitter.py
+@@ -64,7 +64,7 @@
+                 return -1
+         elif unified == 'END LOOP':
+             if (self._block_stack and
+-                    self._block_stack[-2] in ('LOOP', 'FOR', 'WHILE')):
++                    self._block_stack[-1] in ('LOOP', 'FOR', 'WHILE')):
+                 self._block_stack.pop()
+                 return -1
+         elif unified == 'END CASE':

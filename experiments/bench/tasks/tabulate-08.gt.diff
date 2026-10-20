@@ -1,0 +1,11 @@
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -944,7 +944,7 @@
+                 # or, a numeric string eg. "1e1...", "NaN", ..., but isn't
+                 # just an over/underflow
+                 or (
+-                    not (math.isinf(float(string)) and math.isnan(float(string)))
++                    not (math.isinf(float(string)) or math.isnan(float(string)))
+                     or string.lower() in ["inf", "-inf", "nan"]
+                 )
+             )

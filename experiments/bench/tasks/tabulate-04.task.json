@@ -1,0 +1,24 @@
+{
+ "id": "tabulate-04",
+ "library": "tabulate",
+ "upstream_tag": "v0.10.0",
+ "upstream_commit": "3b4cd509820e4c45cd2aaba833aa585ea6308b94",
+ "failing_test": "test/test_output.py::test_textile",
+ "all_failing_tests": [
+  "test/test_output.py::test_textile",
+  "test/test_output.py::test_textile_with_header",
+  "test/test_output.py::test_textile_with_center_align"
+ ],
+ "test_command": ".venv/bin/python -m pytest test/test_output.py::test_textile",
+ "full_suite_command": ".venv/bin/python -m pytest test",
+ "setup": "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r '{bench}/upstream/tabulate.requirements.txt'",
+ "fault_file": "tabulate/__init__.py",
+ "fault_line": 203,
+ "fault_function": "_textile_row_with_attrs",
+ "original_token": "0",
+ "mutated_token": "1",
+ "operator": "int+1",
+ "depth": 5,
+ "fault_func_in_traceback": false,
+ "mutant_id": "tabulate-m026"
+}

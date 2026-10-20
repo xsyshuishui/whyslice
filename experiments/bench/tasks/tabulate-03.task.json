@@ -1,0 +1,23 @@
+{
+ "id": "tabulate-03",
+ "library": "tabulate",
+ "upstream_tag": "v0.10.0",
+ "upstream_commit": "3b4cd509820e4c45cd2aaba833aa585ea6308b94",
+ "failing_test": "test/test_output.py::test_colon_grid",
+ "all_failing_tests": [
+  "test/test_output.py::test_colon_grid",
+  "test/test_output.py::test_colon_grid_with_empty_cells"
+ ],
+ "test_command": ".venv/bin/python -m pytest test/test_output.py::test_colon_grid",
+ "full_suite_command": ".venv/bin/python -m pytest test",
+ "setup": "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r '{bench}/upstream/tabulate.requirements.txt'",
+ "fault_file": "tabulate/__init__.py",
+ "fault_line": 168,
+ "fault_function": "_grid_segment_with_colons",
+ "original_token": "-",
+ "mutated_token": "+",
+ "operator": "arith",
+ "depth": 6,
+ "fault_func_in_traceback": false,
+ "mutant_id": "tabulate-m020"
+}

@@ -1,0 +1,11 @@
+--- a/tabulate/__init__.py
++++ b/tabulate/__init__.py
+@@ -1186,7 +1186,7 @@
+     elif not alignment:
+         padfn = _padnone
+     else:
+-        if preserve_whitespace:
++        if not preserve_whitespace:
+             strings = [s.strip() for s in strings]
+         padfn = _padright
+     return strings, padfn

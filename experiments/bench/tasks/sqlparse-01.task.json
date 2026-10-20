@@ -1,0 +1,22 @@
+{
+ "id": "sqlparse-01",
+ "library": "sqlparse",
+ "upstream_tag": "0.6.0",
+ "upstream_commit": "2f40da99b50d81135aecf96f6b08fcfa338a96de",
+ "failing_test": "tests/test_regressions.py::test_issue489_tzcasts",
+ "all_failing_tests": [
+  "tests/test_regressions.py::test_issue489_tzcasts"
+ ],
+ "test_command": ".venv/bin/python -m pytest tests/test_regressions.py::test_issue489_tzcasts",
+ "full_suite_command": ".venv/bin/python -m pytest tests",
+ "setup": "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r '{bench}/upstream/sqlparse.requirements.txt'",
+ "fault_file": "sqlparse/engine/grouping.py",
+ "fault_line": 124,
+ "fault_function": "group_tzcasts.<locals>.valid_next",
+ "original_token": "or",
+ "mutated_token": "and",
+ "operator": "boolop",
+ "depth": 6,
+ "fault_func_in_traceback": false,
+ "mutant_id": "sqlparse-m008"
+}

@@ -1,0 +1,23 @@
+{
+ "id": "sqlparse-07",
+ "library": "sqlparse",
+ "upstream_tag": "0.6.0",
+ "upstream_commit": "2f40da99b50d81135aecf96f6b08fcfa338a96de",
+ "failing_test": "tests/test_format.py::TestFormatReindentAligned::test_basic",
+ "all_failing_tests": [
+  "tests/test_format.py::TestFormatReindentAligned::test_basic",
+  "tests/test_format.py::TestFormatReindentAligned::test_group_by_subquery"
+ ],
+ "test_command": ".venv/bin/python -m pytest tests/test_format.py::TestFormatReindentAligned::test_basic",
+ "full_suite_command": ".venv/bin/python -m pytest tests",
+ "setup": "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r '{bench}/upstream/sqlparse.requirements.txt'",
+ "fault_file": "sqlparse/filters/aligned_indent.py",
+ "fault_line": 39,
+ "fault_function": "AlignedIndentFilter.nl",
+ "original_token": "+",
+ "mutated_token": "-",
+ "operator": "arith",
+ "depth": 10,
+ "fault_func_in_traceback": false,
+ "mutant_id": "sqlparse-m094"
+}

@@ -1,0 +1,11 @@
+--- a/sqlparse/filters/others.py
++++ b/sqlparse/filters/others.py
+@@ -43,7 +43,7 @@
+                 comment_tokens = token.tokens
+                 if len(comment_tokens) > 0:
+                     if comment_tokens[0].ttype in sql_hints:
+-                        is_sql_hint = False
++                        is_sql_hint = True
+ 
+             if is_sql_hint:
+                 # using current index as start index to search next token for

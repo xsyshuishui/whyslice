@@ -1,0 +1,22 @@
+{
+ "id": "tabulate-11",
+ "library": "tabulate",
+ "upstream_tag": "v0.10.0",
+ "upstream_commit": "3b4cd509820e4c45cd2aaba833aa585ea6308b94",
+ "failing_test": "test/test_output.py::test_break_long_words",
+ "all_failing_tests": [
+  "test/test_output.py::test_break_long_words"
+ ],
+ "test_command": ".venv/bin/python -m pytest test/test_output.py::test_break_long_words",
+ "full_suite_command": ".venv/bin/python -m pytest test",
+ "setup": "uv venv .venv --python 3.12 && uv pip install --python .venv/bin/python -r '{bench}/upstream/tabulate.requirements.txt'",
+ "fault_file": "tabulate/__init__.py",
+ "fault_line": 2801,
+ "fault_function": "_CustomTextWrap._handle_long_word",
+ "original_token": "and",
+ "mutated_token": "or",
+ "operator": "boolop",
+ "depth": 5,
+ "fault_func_in_traceback": false,
+ "mutant_id": "tabulate-m206"
+}

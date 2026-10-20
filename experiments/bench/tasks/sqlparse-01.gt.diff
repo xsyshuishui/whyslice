@@ -1,0 +1,11 @@
+--- a/sqlparse/engine/grouping.py
++++ b/sqlparse/engine/grouping.py
+@@ -121,7 +121,7 @@
+     def valid_next(token):
+         return token is not None and (
+             token.is_whitespace
+-            and token.match(T.Keyword, 'AS')
++            or token.match(T.Keyword, 'AS')
+             or token.match(*sql.TypedLiteral.M_CLOSE)
+         )
+ 
