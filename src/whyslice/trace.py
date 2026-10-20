@@ -216,6 +216,23 @@ class Trace:
             return [last] if last is not None else []
         return list(self.data.get("outputs", []))
 
+    def failure_cutoff(self) -> int:
+        """Index of the last instance that belongs to the failing computation.
+
+        The failing statement may itself call the code under test (``assert f(x) == y``), so
+        the cut is where the exception was raised, not where that statement began. A failing
+        assertion builds its message before the raise (pytest and unittest repr the compared
+        objects); the cut moves back to where that began.
+        """
+        seeds = self.failure_seeds()
+        start = max(seeds) if seeds else len(self.insts) - 1
+        f = self.failure()
+        raised = f.get("raised_at") if f else None
+        if raised is None:  # no failure, or a recording that predates raised_at
+            return start
+        explain = next((e for e in self.data.get("explain_at", []) if start < e <= raised), None)
+        return max(start, (raised if explain is None else explain) - 1)
+
     # ---- rendering ---------------------------------------------------------------------
 
     def code(self, iid: int) -> str:
@@ -489,9 +506,9 @@ class Trace:
         path_idx = {os.path.realpath(p): i for i, p in enumerate(self.files)}
         seeds = self.failure_seeds()
         in_slice = self.lines_of(self.backward(seeds) | set(seeds)) if seeds else set()
-        # only what ran up to the failure: pytest's own failure reporting (reprs of the
-        # compared objects) runs afterwards and appears in the failing test alone
-        cutoff = max(seeds) if seeds else len(self.insts)
+        # only what ran up to the failure: the failure message (reprs of the compared objects)
+        # is built afterwards and would appear in the failing test alone
+        cutoff = self.failure_cutoff()
         executed = {(t[FILE], t[LINE]) for t in self.insts[: cutoff + 1] if t[KIND] != "entry"}
 
         def unit(p: str, ln: int):

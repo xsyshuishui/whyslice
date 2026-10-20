@@ -44,6 +44,19 @@ _CO_VARARGS = 0x04
 _CO_VARKEYWORDS = 0x08
 _CO_GENERATOR_LIKE = 0x20 | 0x80 | 0x200  # generator, coroutine, async generator
 _PKG_DIR = os.path.dirname(os.path.realpath(__file__))
+# Helpers that build the message of a failing assertion: pytest's rewritten asserts and
+# unittest's assert* methods call them after the comparison and before the raise. Project
+# code they run (reprs of the compared objects) belongs to the report, not to the failure.
+_EXPLAIN_HELPERS = {
+    "_saferepr": "_pytest/assertion/rewrite.py",
+    "_call_reprcompare": "_pytest/assertion/rewrite.py",
+    "_format_explanation": "_pytest/assertion/rewrite.py",
+    "_format_assertmsg": "_pytest/assertion/rewrite.py",
+    "_format_boolop": "_pytest/assertion/rewrite.py",
+    "_should_repr_global_name": "_pytest/assertion/rewrite.py",
+    "safe_repr": "unittest/util.py",
+    "_common_shorten_repr": "unittest/util.py",
+}
 
 
 class TraceLimit(BaseException):
@@ -166,6 +179,8 @@ class Recorder:
         self._index_code: Dict[str, Any] = {}
         self.exc_origin: Dict[int, int] = {}
         self._alive: Dict[int, Any] = {}
+        self.exc_raised_at: Dict[int, int] = {}   # exception -> instances recorded when raised
+        self.explain_at: List[int] = []           # instances recorded when a failure message began
         self.outputs: List[int] = []
         self.truncated = False
         self.stopped = False
@@ -326,6 +341,10 @@ class Recorder:
         if self.stopped or event != "call":
             return None
         try:
+            helper = _EXPLAIN_HELPERS.get(frame.f_code.co_name)
+            if helper and frame.f_code.co_filename.replace(os.sep, "/").endswith(helper):
+                if not self.explain_at or self.explain_at[-1] != len(self.insts):
+                    self.explain_at.append(len(self.insts))
             hit = self._want(frame.f_code)
             if hit is None:
                 return None
@@ -644,6 +663,7 @@ class Recorder:
         origin = self.exc_origin.get(key)
         if origin is None:
             self.exc_origin[key] = cur.iid
+            self.exc_raised_at[key] = len(self.insts)
             self._alive[key] = exc_value
             msg = str(exc_value).strip().splitlines()[0] if str(exc_value).strip() else ""
             cur.exc = f"{exc_type.__name__}: {msg[:120]}" if msg else exc_type.__name__
@@ -654,6 +674,10 @@ class Recorder:
 
     def origin_of(self, exc: BaseException) -> Optional[int]:
         return self.exc_origin.get(id(exc))
+
+    def raised_at_of(self, exc: BaseException) -> Optional[int]:
+        """Number of instances recorded when ``exc`` was raised: all of them ran before it."""
+        return self.exc_raised_at.get(id(exc))
 
     def snapshot(self) -> dict:
         units = {}
@@ -673,5 +697,6 @@ class Recorder:
             "frames": list(self.frame_meta),
             "outputs": list(self.outputs),
             "truncated": self.truncated,
+            "explain_at": list(self.explain_at),
             "recorder_errors": self.errors[:3],
         }

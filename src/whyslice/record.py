@@ -76,7 +76,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             rec.stop()
         for nodeid, when, value, text in probe.failures:
             failures.append({"test": nodeid, "phase": when, "exc": text,
-                             "origin": rec.origin_of(value)})
+                             "origin": rec.origin_of(value), "raised_at": rec.raised_at_of(value)})
         exit_code = int(exit_code)
     else:
         if target[0] == "-m":
@@ -96,7 +96,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         except BaseException as exc:  # noqa: BLE001 - we report whatever the program raised
             rec.stop()
             failures.append({"test": "<program>", "phase": "call", "exc": _exc_text(exc),
-                             "origin": rec.origin_of(exc)})
+                             "origin": rec.origin_of(exc), "raised_at": rec.raised_at_of(exc)})
             exit_code = 1
         finally:
             rec.stop()

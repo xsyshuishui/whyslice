@@ -210,8 +210,10 @@ def summarize(rows: List[dict]) -> dict:
         }
 
     # mechanism: does the report's content matter? split tasks by whether the E1b report
-    # (suspects top-10 or causal tree) contained the fault line
-    e1b_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "eval", "results", "e1b.json")
+    # (suspects top-10 or causal tree) contained the fault line. The E2 runs predate the fix of
+    # the suspects cutoff, so the split follows the reports the agents were actually shown.
+    e1b_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "eval", "results",
+                            "e1b-before-cutoff-fix.json")
     split = {}
     if os.path.exists(e1b_path):
         info = {r["task"]: r for r in json.load(open(e1b_path))["rows"] if "error" not in r}

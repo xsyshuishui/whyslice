@@ -236,3 +236,61 @@ def test_predicate_reading_subscript_with_potential_dependence(tmp_path):
         """}, ["prog.py"])
     assert not t.data.get("recorder_errors")
     assert 4 in slice_lines(t, "prog.py", 6, "best")
+
+
+@pytest.mark.parametrize("style", ["pytest", "unittest"])
+def test_suspects_cover_the_failing_assert_but_not_its_message(tmp_path, style):
+    # double() runs inside the failing assert, and the assertion message calls Box.__repr__:
+    # the first must be ranked, the second must not
+    from whyslice.runner import record as run
+
+    files = {"calc.py": """\
+        class Box:
+            def __init__(self, v):
+                self.v = v
+
+            def __eq__(self, other):
+                return self.v == other.v
+
+            def __repr__(self):
+                return f"Box({self.v})"
+
+
+        def double(x):
+            if x > 2:
+                return Box(x * 3)
+            return Box(x * 2)
+    """}
+    if style == "pytest":
+        files["test_calc.py"] = """\
+            from calc import Box, double
+
+            def test_small():
+                assert double(1) == Box(2)
+
+            def test_big():
+                assert double(3) == Box(6)
+        """
+        node = "test_calc.py::test_big"
+    else:
+        files["test_calc.py"] = """\
+            import unittest
+            from calc import Box, double
+
+            class TestDouble(unittest.TestCase):
+                def test_small(self):
+                    self.assertEqual(double(1), Box(2))
+
+                def test_big(self):
+                    self.assertEqual(double(3), Box(6))
+        """
+        node = "test_calc.py::TestDouble::test_big"
+    for name, body in files.items():
+        (tmp_path / name).write_text(textwrap.dedent(body))
+    rec = run(f"pytest -q {node}", cwd=str(tmp_path), python=sys.executable,
+              out=str(tmp_path / "run.pkl"), root=str(tmp_path))
+    t = rec.trace
+    assert "SUSPICIOUS LINES" in t.suspects(rec.spectrum)
+    ranked = [(t.short(f), ln) for _score, (f, ln) in t._last_ranking]
+    assert ranked[0] == ("calc.py", 14)
+    assert ("calc.py", 9) not in ranked

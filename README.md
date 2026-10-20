@@ -36,8 +36,10 @@ test. The last two lines come from a *potential dependence*: the branch was not 
    how it finds execution-omission bugs like the one above.
 4. **Backward slice** from the question `(file:line, variable, occurrence)`; by default, from the
    failing assertion or exception.
-5. **Suspicious lines.** Lines that ran before the failure are ranked by Ochiai over the other
+5. **Suspicious lines.** Lines that ran up to the failure are ranked by Ochiai over the other
    tests in the same test module (spectrum-based fault localization). Lines in the slice win ties.
+   Code that runs only to format the assertion message, such as `__repr__` of the compared
+   objects, is left out.
 6. **Agent-sized report.** The ten most suspicious lines, then a best-first causal tree of about
    20–30 nodes with values. Plumbing edges are hidden, loops are folded, and the slice is
    listed by function at the end. The agent can then ask `why` about any line in the report.
@@ -106,9 +108,9 @@ test; see `experiments/bench/README.md`.
 - The fault line is in the relevant slice for 20/24 bugs. The slice is about half of the executed
   library lines.
 - Causal chains are long, about 180 distinct lines before the fault in tree order, and the causal tree
-  never reaches the fault. The fault is among the top 10 suspicious lines for 13/24 bugs, at rank 1
-  for 7. The slice listing at the end of the report (lines by function) contains it for 17/24, but
-  does not say which line is suspect.
+  never reaches the fault. The fault is among the top 10 suspicious lines for 14/24 bugs, at rank 1
+  for 7. (The version used in E2 got 13/24; see the note under E2.) The slice listing at the end
+  of the report (lines by function) contains it for 17/24, but does not say which line is suspect.
 
 **E2, coding agents.** Claude Code fixed the 24 bugs under the same prompt in three arms:
 - A0: built-in tools only;
@@ -141,11 +143,21 @@ What this shows, and what it does not:
 - **Limits of the benchmark.** The bugs are easy: success rates are at or near the ceiling. They are
   single-token mutants in two libraries that the models may have seen. A placebo arm that pushes only
   the failure summary was not run.
+- **The E2 runs used a version with a bug in the suspicious lines.** That version cut the failing
+  run where the failing statement began. When the failing assert itself calls the code under test
+  (`assert f(x) == y`), all of that code was left out of the ranking. For 5 sqlparse tasks the
+  list was empty, so those reports had no suspicious lines, and the suspicious-lines-only arm
+  pushed just the failure summary. The bug is fixed: the cut is now where the exception is raised,
+  and code that only formats the assertion message is left out. E1b above uses the fixed version.
+  E2 was not re-run.
+  - On those 5 tasks no push variant helped much: tree only gave −0.3 turns.
+  - So the comparison of the two halves rests on the other 19 tasks, where suspicious lines only
+    gave −2.0 turns and tree only −1.8.
 
 ## Reproduce
 
 ```bash
-pytest tests                                   # 16 unit tests
+pytest tests                                   # 18 unit tests
 python eval/run_e1.py                          # E1; needs QuixBugs, see eval/QUIXBUGS_NOTES.md
 python eval/run_e1b.py                         # E1b; needs the benchmark, see experiments/bench/README.md
 python experiments/run_agent.py --arms A0 A1 A2 --seeds 3 --model claude-haiku-5-5 --out experiments/runs
@@ -164,7 +176,7 @@ out of each run. For a non-Claude model behind an Anthropic-compatible endpoint,
   calls are missed.
 - Tracing every line is slow: about 300–600× on tight pure-Python loops. Record one failing test,
   not a suite. A failing test usually executes a few thousand statements; recording takes
-  1.4–5.4 s on the benchmark.
+  1.4–4.5 s on the benchmark, one task at a time.
 - Single-threaded CPython only. Data flow inside C extensions is approximated as "the whole object
   changed".
 
